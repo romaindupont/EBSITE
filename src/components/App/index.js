@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 //import { Switch, Route, Redirect } from 'react-router-dom';
 //import PropTypes from 'prop-types';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import AccueilMobile from '../AccueilMobile';
 import Menu from '../Menu';
 import Category from '../Category';

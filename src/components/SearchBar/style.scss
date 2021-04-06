@@ -14,6 +14,7 @@
   &-form {
 
     &-input {
+      display: none;
       border: 0;
       outline: none;
       position: absolute;
@@ -21,10 +22,11 @@
       font-size: 1rem;
       background: #EFFCF6;
       &-open {
+        display: block;
         position: absolute;
         right: 100px;
         transition:right 2s;
-        border-bottom: 1px solid rgba(0,0,0, 0.2);
+        border-bottom: 1px solid #55efc4;
       }
     }
   }

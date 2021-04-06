@@ -6,3 +6,43 @@
     display: none;
   }
 }
+
+.category-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  }
+
+.category-type{
+  cursor: pointer;
+  width: 45%;
+  margin: 30px 0.5rem;
+
+  &-image {
+    width: 100%;
+    
+  }
+  &-titre {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    color: black;
+  }
+}
+
+.category-type-round{
+  background: #bbdfc8;
+/*   height: 100%;
+  width: 100%; */
+/*   border-radius: 50%; */
+  box-shadow: 10px -10px #75cfb8;
+}
+.category-title {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  
+}
