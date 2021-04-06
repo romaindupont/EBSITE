@@ -1,0 +1,48 @@
+.articles-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+}
+.articles-section-all {
+  display: flex;
+  margin: 2rem 1rem;
+  border: 1px solid #bbdfc8;
+  border-radius: 25px;
+  overflow:hidden;
+  
+}
+.articles-section-image {
+  background: #bbdfc8;
+
+  &--img {
+    width: 150px;
+  }
+}
+
+.articles-section-infos {
+  margin-left: .5rem;
+  position: relative;
+
+
+  &-title {
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    text-transform: uppercase;
+  }
+  &-small {
+    color: rgba(0,0,0, 0.4);
+  }
+  &-price {
+    font-weight: 900;
+  }
+  &-addCart {
+    width: 10%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #bbdfc8;
+    border-radius: 50%;
+    padding: .3rem;
+  }
+}

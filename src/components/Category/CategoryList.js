@@ -7,7 +7,7 @@ const CategoryList = ({slug, picture, category}) => {
     console.log(e.target.value)
   }
   return (
-    <Link to={`categorie/${slug}`} className="category-type" onClick={clickOnCategory}>
+    <Link to={`categorieS/${slug}`} className="category-type" onClick={clickOnCategory}>
       <div  className="category-type-round">
         <img className="category-type-image" src={picture} alt=""/>
       </div>

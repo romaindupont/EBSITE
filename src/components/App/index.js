@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import AccueilMobile from '../AccueilMobile';
 import Menu from '../Menu';
 import Category from '../Category';
+import Articles from '../Articles';
 import Logo from '../../assets/img/logo2.png';
 
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
         </Route>
         <Route exact path="/categories">
           <Category open={open}/>
+        </Route>
+        <Route exact path="/articles">
+          <Articles />
         </Route>
       </Switch>
     </>
