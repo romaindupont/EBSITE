@@ -1,0 +1,56 @@
+.searchBar {
+  display: flex;
+  background: #EFFCF6;
+  &-image {
+    cursor: pointer;
+    width: 8%;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    &--open {
+      display: none;
+    }
+  }
+  &-form {
+
+    &-input {
+      border: 0;
+      outline: none;
+      position: absolute;
+      right: -200px;
+      font-size: 1rem;
+      background: #EFFCF6;
+      &-open {
+        position: absolute;
+        right: 100px;
+        transition:right 2s;
+        border-bottom: 1px solid rgba(0,0,0, 0.2);
+      }
+    }
+  }
+}
+
+.searchBar-menu {
+  background: #EFFCF6;
+}
+
+.searchBar-menu-barre-1, .searchBar-menu-barre-3 {
+  height: 5px;
+  width: 20px;
+  background: #000;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
+.searchBar-menu-barre-1--open, .searchBar-menu-barre-3--open {
+  display: block;
+}
+.searchBar-menu-barre-1--open {
+  transform: (rotate(-45deg) translate(-9px,5px));
+
+}
+.searchBar-menu-barre-3--open {
+  transform: (rotate(45deg) translate(5px,10px));
+}
