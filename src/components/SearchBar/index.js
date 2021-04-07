@@ -7,6 +7,7 @@ const SearchBar = () => {
 
   const clickOnSearch = () => {
     setOpenSearch(!openSearch);
+    
   }
   return (
    <div className="searchBar">
