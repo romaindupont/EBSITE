@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchBar from '../SearchBar';
 import Card from './Card';
-import Cart from '../../assets/img/cart.svg';
+import Footer from './footer';
 import classNames from 'classnames';
 
 
 import './style.scss';
 
-const Articles = () => {
+const Articles = ({open}) => {
+  const [count, setCount] = useState(0);
 
   return (
-    <div className={classNames("articles", {"articles--open":false})}>
-    <img className="caddy" src={Cart} alt=""/>
+    <div className={classNames("articles", {"articles--open":open})}>
+
       <SearchBar />
-      <Card />
+      <div className="section">
+        <Card count={count} setCount={setCount}/>
+        <Card count={count} setCount={setCount}/>
+        <Card count={count} setCount={setCount}/>
+      </div>
+      <Footer count={count}/>
     </div>
   )
 }

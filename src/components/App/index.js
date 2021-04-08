@@ -22,7 +22,7 @@ const App = () => {
           <Category open={open}/>
         </Route>
         <Route exact path="/articles">
-          <Articles />
+          <Articles open={open}/>
         </Route>
       </Switch>
     </>

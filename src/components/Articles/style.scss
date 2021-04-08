@@ -47,9 +47,45 @@
   }
 }
 .articles {
-  height: 100vh;
+  height: 100%;
+  &--open {
+    display: none;
+  }
 }
 
+.caddy,.home,.account {
+  width: 30px;
+}
 .caddy {
-  width: 150px;
+  position: relative;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background: #bbdfc8;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0px -5px 10px #00b894;
+  position:fixed;
+  bottom:0;
+}
+
+.section {
+  overflow-x: auto;
+  height: 80vh;
+}
+
+.counter--count {
+  top: -0.4rem;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background:#00b894;
+  text-align: center;
+  border-radius: 50%;
+  z-index: -1;
+  color: white;
+  padding-bottom: 0.2rem
+
 }
