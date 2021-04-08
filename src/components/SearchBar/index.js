@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import SearchLogo from '../../assets/img/search.svg';
 import classNames from 'classnames';
 import './style.scss';
+
 const SearchBar = () => {
   const [openSearch, setOpenSearch] = useState(false);
 

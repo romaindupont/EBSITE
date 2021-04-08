@@ -7,6 +7,7 @@ import Menu from '../Menu';
 import Category from '../Category';
 import Articles from '../Articles';
 import Logo from '../../assets/img/logo2.png';
+import OneArticle from '../Articles/OneArticle';
 
 const App = () => {
   const [open, setOpen] = useState(false)
@@ -23,6 +24,9 @@ const App = () => {
         </Route>
         <Route exact path="/articles">
           <Articles open={open}/>
+        </Route>
+        <Route path="/articles/:id">
+          <OneArticle open={open}/>
         </Route>
       </Switch>
     </>

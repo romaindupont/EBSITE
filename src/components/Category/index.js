@@ -16,9 +16,6 @@ const Category = ({open}) => {
          <CategoryList key={category.id} {...category}/>
          )}
       </div>
-      
-
-
     </div>
   )
 }

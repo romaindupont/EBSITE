@@ -10,6 +10,7 @@
   border: 1px solid #bbdfc8;
   border-radius: 25px;
   overflow:hidden;
+  position: relative;
   
 }
 .articles-section-image {
@@ -22,8 +23,7 @@
 
 .articles-section-infos {
   margin-left: .5rem;
-  position: relative;
-
+  color: black;
 
   &-title {
     font-family: 'Roboto', sans-serif;
@@ -37,7 +37,7 @@
     font-weight: 900;
   }
   &-addCart {
-    width: 10%;
+    width: 7%;
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -69,6 +69,7 @@
   box-shadow: 0px -5px 10px #00b894;
   position:fixed;
   bottom:0;
+  padding-top: 1rem;
 }
 
 .section {
@@ -77,7 +78,7 @@
 }
 
 .counter--count {
-  top: -0.4rem;
+  top: 0;
   position: absolute;
   width: 20px;
   height: 20px;
@@ -88,4 +89,7 @@
   color: white;
   padding-bottom: 0.2rem
 
+}
+a {
+  text-decoration: none;
 }

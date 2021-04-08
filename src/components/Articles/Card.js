@@ -1,9 +1,21 @@
 import React from 'react';
 import Cart from '../../assets/img/cart.svg';
 import Jouet from '../../assets/img/jouet.png';
+import { Link } from 'react-router-dom';
+
 import './style.scss';
 
-const Card = ({setCount, count}) => {
+const Card = ({setCount,
+  count,
+  id,
+  category,
+  picture,
+  title,
+  description,
+  descriptionPlus,
+  dimension,
+  prix
+}) => {
   const clickPanier = (e) => {
     e.preventDefault();
     console.log(e.target.id)
@@ -14,14 +26,14 @@ const Card = ({setCount, count}) => {
   return (
     <form type="submit" className="articles-section-all">
           <div className="articles-section-image">
-            <img className="articles-section-image--img" src={Jouet} alt=""/>
+            <Link to={`articles/${id}`}><img className="articles-section-image--img" src={picture} alt=""/></Link>
           </div>
-          <div className="articles-section-infos">
-            <h2 className="articles-section-infos-title">titre 1</h2>
-            <p className="articles-section-infos-small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad cum fuga recusandae.</p>
-            <p className="articles-section-infos-price">30.90€</p>
-            <img className="articles-section-infos-addCart" src={Cart} onClick={clickPanier} alt="panier" id="1"/>
-          </div>
+          <Link to={`articles/${id}`}><div className="articles-section-infos">
+            <h2 className="articles-section-infos-title">{title}</h2>
+            <p className="articles-section-infos-small">{description}</p>
+            <p className="articles-section-infos-price">{prix.toFixed(2)}€</p>
+            <img className="articles-section-infos-addCart" src={Cart} onClick={clickPanier} alt="panier" id={id}/>
+          </div></Link>
     </form>
       
   )

@@ -3,7 +3,7 @@ import SearchBar from '../SearchBar';
 import Card from './Card';
 import Footer from './footer';
 import classNames from 'classnames';
-
+import articleData from '../../data/articleData';
 
 import './style.scss';
 
@@ -15,9 +15,9 @@ const Articles = ({open}) => {
 
       <SearchBar />
       <div className="section">
-        <Card count={count} setCount={setCount}/>
-        <Card count={count} setCount={setCount}/>
-        <Card count={count} setCount={setCount}/>
+      {articleData.map((article)=>
+        <Card count={count} setCount={setCount} {...article}/>
+      )}
       </div>
       <Footer count={count}/>
     </div>
