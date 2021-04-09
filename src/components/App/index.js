@@ -8,6 +8,7 @@ import Category from '../Category';
 import Articles from '../Articles';
 import Logo from '../../assets/img/logo2.png';
 import OneArticle from '../Articles/OneArticle';
+import Footer from '../Articles/footer';
 
 const App = () => {
   const [open, setOpen] = useState(false)

@@ -1,6 +1,5 @@
 import React from 'react';
 import Cart from '../../assets/img/cart.svg';
-import Jouet from '../../assets/img/jouet.png';
 import { Link } from 'react-router-dom';
 
 import './style.scss';
