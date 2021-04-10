@@ -2,6 +2,7 @@ import React from 'react';
 import Cart from '../../assets/img/cart.svg';
 import Jouet from '../../assets/img/jouet.png';
 import BackArrow from '../../assets/img/back-arrow.svg';
+import Footer from '../Articles/footer';
 import { useHistory } from 'react-router-dom';
 import './styleOneArticle.scss';
 
@@ -18,12 +19,19 @@ const OneArticle = ({setCount, count}) => {
     history.goBack();
   };
   return (
+    <>
     <form type="submit" className="articles-detail">
       <div className="articles-back">
-        <img onClick={routeChange} className="articles-detail-image--img" src={BackArrow} alt=""/>
+        <img onClick={routeChange} src={BackArrow} alt=""/>
       </div>
       <div className="articles-detail-image">
+      <div className="articles-detail-circle"></div>
         <img className="articles-detail-image--img" src={Jouet} alt=""/>
+      </div>
+      <div className="articles-detail-photos">
+        <span className="articles-detail-photos-1">1</span>
+        <span className="articles-detail-photos-2">2</span>
+        <span className="articles-detail-photos-3">3</span>
       </div>
       <div className="articles-detail-infos">
         <h2 className="articles-detail-infos-title">titre 1</h2>
@@ -32,6 +40,8 @@ const OneArticle = ({setCount, count}) => {
         <img className="articles-detail-infos-addCart" src={Cart} onClick={clickPanier} alt="panier" id="1"/>
       </div>
     </form>
+    <Footer />
+    </>
       
   )
 }
