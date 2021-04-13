@@ -19,7 +19,16 @@
 .articles-detail-image--img {
   z-index: 2;
   width: 80%;
-
+  &--1 {
+    display: none;
+    z-index: 2;
+    width: 80%;
+  }
+  &--2 {
+    display: none;
+    z-index: 2;
+    width: 80%;
+  }
 }
 .articles-detail-photos {
   margin: -15px auto;
@@ -135,7 +144,7 @@
 }
 
 .articles-detail-infos-small {
-  height: 150px;
+  height: 100px;
   font-weight: lighter;
   color: rgba(0, 0, 0, 0.8);
   overflow: auto;

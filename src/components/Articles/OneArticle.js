@@ -6,7 +6,7 @@ import './styleOneArticle.scss';
 import articleData from '../../data/articleData';
 
 const OneArticle = ({setCount, count}) => {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const clickPanier = (e) => {
     e.preventDefault();
     const newCount = count + quantity;
@@ -29,7 +29,21 @@ const OneArticle = ({setCount, count}) => {
     setQuantity(plus)
   };
   const { id } = useParams();
-  
+  const redClick = () => {
+    document.querySelector('.articles-detail-image--img').style.display = "block"
+    document.querySelector('.articles-detail-image--img--1').style.display = "none"
+    document.querySelector('.articles-detail-image--img--2').style.display = "none"
+  }
+  const greenClick = () => {
+    document.querySelector('.articles-detail-image--img--1').style.display = "block"
+    document.querySelector('.articles-detail-image--img').style.display = "none"
+    document.querySelector('.articles-detail-image--img--2').style.display = "none"
+  }
+  const blueClick = () => {
+    document.querySelector('.articles-detail-image--img--2').style.display = "block"
+    document.querySelector('.articles-detail-image--img').style.display = "none"
+    document.querySelector('.articles-detail-image--img--1').style.display = "none"
+  }
   const currentObject =articleData.find((article) => article.id == id);
   console.log(currentObject)
   return (
@@ -41,11 +55,13 @@ const OneArticle = ({setCount, count}) => {
       <div className="articles-detail-image">
       <div className="articles-detail-circle"></div>
         <img className="articles-detail-image--img" src={currentObject.picture} alt=""/>
+        <img className="articles-detail-image--img--1" src={currentObject.picture1} alt=""/>
+        <p className="articles-detail-image--img--2">Dimension : {currentObject.dimension}</p>
       </div>
       <div className="articles-detail-photos">
-        <span className="articles-detail-photos-1"></span>
-        <span className="articles-detail-photos-2"></span>
-        <span className="articles-detail-photos-3"></span>
+        <span onClick={redClick} className="articles-detail-photos-1"></span>
+        <span onClick={greenClick} className="articles-detail-photos-2"></span>
+        <span onClick={blueClick} className="articles-detail-photos-3"></span>
       </div>
       <div className="articles-detail-infos">
         <h2 className="articles-detail-infos-title">{currentObject.title}</h2>
