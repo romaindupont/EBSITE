@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SearchBar from '../SearchBar';
 import Card from './Card';
-import Footer from './footer';
 import classNames from 'classnames';
 import articleData from '../../data/articleData';
 
 import './style.scss';
 
-const Articles = ({open}) => {
-  const [count, setCount] = useState(0);
+const Articles = ({count, open, setCount}) => {
+  
 
   return (
     <div className={classNames("articles", {"articles--open":open})}>
@@ -19,7 +18,7 @@ const Articles = ({open}) => {
         <Card count={count} setCount={setCount} {...article}/>
       )}
       </div>
-      <Footer count={count}/>
+      
     </div>
   )
 }

@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
-  z-index: 99;
+  z-index: 100;
 
   &-point-1 {
     height: 5px;
@@ -67,6 +67,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    z-index: 99;
   }
 }
 .menu-modal {
@@ -79,6 +80,7 @@
   height: 100vh;
   border-radius: 0;
   background: white;
+  z-index: 99;
 
 }
 .menu-nav--link {

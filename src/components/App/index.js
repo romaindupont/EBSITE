@@ -8,10 +8,11 @@ import Category from '../Category';
 import Articles from '../Articles';
 import Logo from '../../assets/img/logo2.png';
 import OneArticle from '../Articles/OneArticle';
-
+import Footer from '../Articles/footer';
 
 const App = () => {
   const [open, setOpen] = useState(false)
+  const [count, setCount] = useState(0);
   return (
     <>
       <img className="accueil-logo" src={Logo} alt=""/>
@@ -24,10 +25,12 @@ const App = () => {
           <Category open={open}/>
         </Route>
         <Route exact path="/articles">
-          <Articles open={open}/>
+          <Articles count={count} setCount={setCount} open={open}/>
+          <Footer count={count}/>
         </Route>
         <Route path="/articles/:id">
-          <OneArticle open={open}/>
+          <OneArticle count={count} setCount={setCount} open={open}/>
+          <Footer count={count}/>
         </Route>
       </Switch>
     </>
