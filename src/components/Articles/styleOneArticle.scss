@@ -28,7 +28,9 @@
     display: none;
     z-index: 2;
     width: 80%;
-  }
+    text-align: center;
+    margin-bottom: 11rem;
+    }
 }
 .articles-detail-photos {
   margin: -15px auto;
@@ -176,4 +178,8 @@
   text-transform:uppercase;
   color: rgba(0, 0, 0, 0.8);
   margin: 0;
+}
+
+span:visited {
+  background: chartreuse;
 }

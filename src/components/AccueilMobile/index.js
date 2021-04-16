@@ -56,7 +56,7 @@ const AccueilMobile = () => {
           
         </div>
         <div className="accueil-button">
-          <Link href={url} className="accueil-button--click">Venez découvrir <img src={Next} className="accueil-button--next" alt="page-suivante"/></Link>
+          <Link to='/categories' className="accueil-button--click">Venez découvrir <img src={Next} className="accueil-button--next" alt="page-suivante"/></Link>
         </div>
     </div>
   )

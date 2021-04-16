@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Jouet from '../../assets/img/jouet.png';
 import BackArrow from '../../assets/img/back-arrow.svg';
 import { useHistory,useParams } from 'react-router-dom';
 import './styleOneArticle.scss';
@@ -45,7 +44,6 @@ const OneArticle = ({setCount, count}) => {
     document.querySelector('.articles-detail-image--img--1').style.display = "none"
   }
   const currentObject =articleData.find((article) => article.id == id);
-  console.log(currentObject)
   return (
     <>
     <form type="submit" className="articles-detail">

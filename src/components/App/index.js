@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import { Switch, Route } from 'react-router-dom';
 import AccueilMobile from '../AccueilMobile';
 import Menu from '../Menu';
-import Category from '../Category';
+import Category from '../../containers/Category';
 import Articles from '../Articles';
 import Logo from '../../assets/img/logo2.png';
 import OneArticle from '../Articles/OneArticle';
