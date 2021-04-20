@@ -3,7 +3,7 @@ import SearchLogo from '../../assets/img/search.svg';
 import classNames from 'classnames';
 import './style.scss';
 
-const SearchBar = ({changeCategoryField, categoryName, name}) => {
+const SearchBar = ({changeField, categoryName, name}) => {
   const [openSearch, setOpenSearch] = useState(false);
 
   const clickOnSearch = () => {
@@ -11,7 +11,7 @@ const SearchBar = ({changeCategoryField, categoryName, name}) => {
     
   };
   const handleChange = (e) => {
-    changeCategoryField(e.target.value, name)
+    changeField(e.target.value, name)
   }
   return (
    <div className="searchBar">

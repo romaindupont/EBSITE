@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import {changeCategoryField} from '../../actions/category';
 // == Import : local
 import SearchBar from '../../components/SearchBar';
 
@@ -8,12 +7,6 @@ const mapStateToProps = (state) => ({
   
 });
 
-const mapDispatchToProps = (dispatch)=> ({
-  changeCategoryField: (newValue, name) => {
-    dispatch(changeCategoryField(newValue, name));
-  },
-  
-
-});
+const mapDispatchToProps = null;
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

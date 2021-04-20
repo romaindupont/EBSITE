@@ -11,8 +11,3 @@ export const changeCategoryField = (newValue,key) => ({
   key,
 });
 
-export const SEARCH_CATEGORY = 'SEARCH_CATEGORY';
-export const searchCategory = (list) => ({
-  type: SEARCH_CATEGORY,
-  list,
-});

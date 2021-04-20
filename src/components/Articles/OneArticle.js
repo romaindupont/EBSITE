@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useState } from 'react';
 import BackArrow from '../../assets/img/back-arrow.svg';
 import { useHistory,useParams } from 'react-router-dom';

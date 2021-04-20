@@ -5,13 +5,10 @@ import CategoryList from './CategoryList';
 /* import DataCategory from '../../data/catergoryData'; */
 import './style.scss';
 
-const Category = ({open,DataCategory,categoryNames, list, searchCategory}) => {
-  console.log(list)
-  /* const filtre = DataCategory.filter((truc) => truc.category=categoryNames)
-  console.log(filtre) */
+const Category = ({open,DataCategory,changeCategoryField, list}) => {
   return (
     <div className={classNames("category", {"category--open":open})}>
-      <SearchBar name="categoryName"/>
+      <SearchBar name="categoryName" changeField={changeCategoryField}/>
       <h2 className="category-title">All Category</h2>
       <div className="category-section">
       {list.length === 0 ? (

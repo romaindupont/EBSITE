@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import {searchCategory} from '../../actions/category';
 // == Import : local
 import Category from '../../components/Category';
+import {changeCategoryField} from '../../actions/category';
 
 const mapStateToProps = (state) => ({
  DataCategory: state.category.categoryList,
@@ -10,8 +10,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch)=> ({
-  searchCategory:(list) => {
-    dispatch(searchCategory(list));
+  changeCategoryField: (newValue, name) => {
+    dispatch(changeCategoryField(newValue, name));
   },
   
 

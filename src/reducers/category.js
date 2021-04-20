@@ -1,4 +1,4 @@
-import {FETCH_CATEGORY,CHANGE_CATEGORY_FIELD, SEARCH_CATEGORY} from '../actions/category';
+import {FETCH_CATEGORY,CHANGE_CATEGORY_FIELD} from '../actions/category';
 
 const initialState = {
   categoryList : [
@@ -12,7 +12,7 @@ const initialState = {
       id:2,
       name:"Décoration",
       picture:"https://i.imgur.com/Gg1gSiC.png",
-      slug:"deco",
+      slug:"decoration",
     },
     {
       id:3,
@@ -28,9 +28,9 @@ const initialState = {
     },
     {
       id:5,
-      name:"Truc",
+      name:"All",
       picture:"https://i.imgur.com/Gg1gSiC.png",
-      slug:"truc",
+      slug:"all",
     },
 ],
   categoryName: '',
@@ -50,11 +50,6 @@ const reducer = (state = initialState, action = {}) => {
       [action.key]: action.newValue,  
       list:state.categoryList.filter((category)=> category.name.toLowerCase().replace(/é|è|ê/g,"e").includes(action.newValue)),    
     }
-    case SEARCH_CATEGORY:
-      return {
-        ...state,
-        list:[],
-      }
     default:
       return state;
   }
