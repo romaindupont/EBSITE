@@ -6,6 +6,10 @@
   background: #bbdfc8;
   border-radius: 10px 0 0 10px;
   position: relative;
+
+  &--move {
+    left: 100px;
+  }
 }
 .panier-container-img {
   width: 60px;
@@ -87,5 +91,16 @@
 
   &-img {
     width: 50px;
+    
   }
+  &--move {
+    left: 0;
+    left: -15%;
+  }
+}
+.panier {
+  height: 70vh;
+}
+.panier-titre {
+  text-align: center;
 }

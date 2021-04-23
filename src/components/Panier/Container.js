@@ -7,20 +7,24 @@ import Dust from '../../assets/img/dustbin.svg';
 
 const Container = () => {
   const [priceView, setPriceView] = useState(false);
-  const [quantity, SetQuantity]= useState(1);
+  const [dust, setDust] = useState(false);
+  const [quantity, setQuantity]= useState(1);
   const quantityClick = () => {
     setPriceView(!priceView) 
   }
   const minusClick = () => {
-    SetQuantity(quantity-1)
+    setQuantity(quantity-1)
   }
   const plusClick = () => {
-    SetQuantity(quantity+1)
+    setQuantity(quantity+1)
+  };
+  const handleSupp = () => {
+    setDust(!dust);
   }
   const Montant = 50*quantity;
   return (
-      <div className="panier-container">
-        <img className="panier-container-img" src={ImageTest} alt=""/>
+      <div className={classNames("panier-container", {"panier-container--move":dust})}>
+        <img className="panier-container-img" src={ImageTest} alt="" onMouseEnter={handleSupp}/>
         <div className="panier-container-infos">
           <h3 className="panier-container-reference">Titre</h3>
           <h4 className="panier-container-category">Category</h4>
@@ -32,7 +36,7 @@ const Container = () => {
           <p className="panier-container-add--quantity">{quantity}</p>
           <div className="panier-container-add--plus" onClick={plusClick}>+</div>
         </div>
-        <div className="panier-container--supp">
+        <div className={classNames("panier-container--supp", {"panier-container--supp--move":dust})}>
           <img className="panier-container--supp-img" src={Dust} alt="poubelle"/>
         </div>
       </div>
