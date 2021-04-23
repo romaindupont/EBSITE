@@ -8,6 +8,7 @@ const Panier = () => {
     <div className="panier">
       <h2 className="panier-titre">Mon Panier</h2>
       <Container />
+      <Container />
     </div>
   )
 }

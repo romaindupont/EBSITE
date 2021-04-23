@@ -1,10 +1,16 @@
 .panier-container {
   display: flex;
+  border: 1px solid #bbdfc8;
+  margin: 1rem 0rem 1rem 1rem;
+  padding: 0.7rem 0;
+  background: #bbdfc8;
+  border-radius: 10px 0 0 10px;
+  position: relative;
 }
 .panier-container-img {
   width: 60px;
   height: 60px;
-  border: 1px solid black;
+  border: 1px solid #bbdfc8;
   margin: auto 1rem;
 }
 
@@ -20,4 +26,66 @@
   font-size: 0.7rem;
   margin: 0;
 
+}
+
+.panier-container-quantity {
+  margin-left: 5rem;
+}
+
+.panier-container-montant {
+  position: absolute;
+  right: 0;
+  margin-right: 3rem;
+}
+
+.panier-container-add {
+  display: flex;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  background: black;
+  color: white;
+  padding: 1.7rem;
+  transition: right 700ms cubic-bezier(.28,1.29,.89,.65);
+
+  &--minus {
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+  }
+  &--plus {
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+  }
+  &--quantity {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px 1rem;
+    color: white;
+  }
+  &--view {
+    right: 0;
+    
+
+  }
+}
+.panier-container--supp{
+  background: red;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  padding: 1rem;
+  border-radius: 10px 0 0 10px;
+
+  &-img {
+    width: 50px;
+  }
 }
