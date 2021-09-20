@@ -2,6 +2,7 @@ import React from 'react';
 import Cart from '../../assets/img/cart.svg';
 import { Link } from 'react-router-dom';
 
+
 import './style.scss';
 
 const Card = ({setCount,
@@ -13,13 +14,15 @@ const Card = ({setCount,
   description,
   descriptionPlus,
   dimension,
-  prix
+  prix,
+  sendArticleToBasket
 }) => {
   const clickPanier = (e) => {
     e.preventDefault();
-    console.log(e.target.id)
     const newCount = count+1;
     setCount(newCount)
+    console.log(parseInt(e.target.id), newCount)
+    sendArticleToBasket(parseInt(e.target.id), newCount)
 
   }
   return (

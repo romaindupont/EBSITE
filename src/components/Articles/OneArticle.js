@@ -44,7 +44,7 @@ const OneArticle = ({setCount, count}) => {
     document.querySelector('.articles-detail-image--img').style.display = "none"
     document.querySelector('.articles-detail-image--img--1').style.display = "none"
   }
-  const currentObject =articleData.find((article) => article.id == id);
+  const currentObject = articleData.find((article) => article.id == id);
   return (
     <>
     <form type="submit" className="articles-detail">

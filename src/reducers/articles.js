@@ -1,4 +1,5 @@
 import {CHANGE_ARTICLES_FIELD} from '../actions/articles';
+import { SEND_ARTICLE_TO_BASKET } from "../actions/order";
 
 const initialState = {
   articlesList : [
@@ -54,6 +55,9 @@ const initialState = {
 ],
   articlesName: '',
   listArticles: [],
+  panier: [
+  ],
+  id:'',
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -63,6 +67,25 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
       [action.key]: action.newValue,
       listArticles: state.articlesList.filter((article)=> article.title.toLowerCase().replace(/é|è|ê/g,"e").includes(action.newValue)),
+      }
+    case SEND_ARTICLE_TO_BASKET:
+      return {
+        ...state,
+        panier: [
+        state.articlesList.find(article => {
+          if(article.id === action.article_id) {
+            return {
+              id: article.id,
+              title: article.article_name,
+              price: article.price,
+              description: article.description,
+              quantity: article.quantity,
+            }
+          }
+          else {
+            return article;
+          }
+        })]
       }
     default:
       return state;

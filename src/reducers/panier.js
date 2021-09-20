@@ -1,15 +1,16 @@
+/* import { SEND_ARTICLE_TO_BASKET } from "../actions/order"; */
+
 const initialState = {
-  panier: [],
+  /* panier: [], */
   montant:null,
   
 };
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-/*     case CHANGE_ARTICLES_FIELD:
+    /* case SEND_ARTICLE_TO_BASKET:
       return {
         ...state,
-      [action.key]: action.newValue,
       listArticles: state.articlesList.filter((article)=> article.title.toLowerCase().replace(/é|è|ê/g,"e").includes(action.newValue)),
       } */
     default:
