@@ -10,6 +10,10 @@
   &--move {
     left: 100px;
   }
+  &-infos {
+    margin-right: 1rem;
+    width: 100px;
+  }
 }
 .panier-container-img {
   width: 60px;
@@ -33,7 +37,8 @@
 }
 
 .panier-container-quantity {
-  margin-left: 5rem;
+  /* margin-left: 2rem; */
+  /* margin-right: 2rem; */
 }
 
 .panier-container-montant {
@@ -43,7 +48,7 @@
 }
 
 .panier-container-add {
-  display: flex;
+  display: none;
   position: absolute;
   right: -100%;
   top: 0;
@@ -76,6 +81,7 @@
   }
   &--view {
     right: 0;
+    display: flex;
     
 
   }
@@ -103,4 +109,13 @@
 }
 .panier-titre {
   text-align: center;
+}
+
+.panier-retour {
+  background: #bbdfc8;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: black;
+  cursor: pointer;
 }

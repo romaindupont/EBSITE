@@ -6,13 +6,12 @@ import { useParams,useHistory } from 'react-router-dom';
 import BackArrow from '../../assets/img/back-arrow.svg';
 import './style.scss';
 
-const Articles = ({count, open, setCount,articleData,changeArticlesField,listArticles, panier, sendArticleToBasket}) => {
+const Articles = ({count, open, setCount,articleData,changeArticlesField,listArticles, sendArticleToBasket}) => {
   const { slug } = useParams();
   let history = useHistory();
   const routeChange =()=> {
     history.goBack();
   };
-  console.log(panier)
   let list= [];
   if(listArticles.length===0){
     list = articleData;

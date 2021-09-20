@@ -1,4 +1,4 @@
-import {CHANGE_ARTICLES_FIELD} from '../actions/articles';
+import {CHANGE_ARTICLES_FIELD, SAVE_ARTICLE_ID, DUST_ARTICLE} from '../actions/articles';
 import { SEND_ARTICLE_TO_BASKET } from "../actions/order";
 
 const initialState = {
@@ -69,24 +69,33 @@ const reducer = (state = initialState, action = {}) => {
       listArticles: state.articlesList.filter((article)=> article.title.toLowerCase().replace(/é|è|ê/g,"e").includes(action.newValue)),
       }
     case SEND_ARTICLE_TO_BASKET:
+      const newArticleInBasket = state.articlesList.find(article => article.id === action.article_id );
+      let jsonArticle = {
+        'id': newArticleInBasket.id,
+        'title': newArticleInBasket.title,
+        'quantity': 1,
+        'price': newArticleInBasket.prix,
+        'category': newArticleInBasket.category,
+        'picture':newArticleInBasket.picture
+      }
       return {
         ...state,
         panier: [
-        state.articlesList.find(article => {
-          if(article.id === action.article_id) {
-            return {
-              id: article.id,
-              title: article.article_name,
-              price: article.price,
-              description: article.description,
-              quantity: article.quantity,
-            }
-          }
-          else {
-            return article;
-          }
-        })]
+          ...state.panier,
+          jsonArticle
+          
+        ]
       }
+      case SAVE_ARTICLE_ID:
+        return {
+          ...state,
+          id: action.id
+        }
+      case DUST_ARTICLE:
+        return {
+          ...state,
+          panier: state.panier.filter((item) => { return action.id !== item.id }),
+        }
     default:
       return state;
   }

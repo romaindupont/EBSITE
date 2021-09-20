@@ -1,7 +1,6 @@
 import React from 'react';
 import Cart from '../../assets/img/cart.svg';
-import { Link } from 'react-router-dom';
-
+import { Link, useHistory } from 'react-router-dom';
 
 import './style.scss';
 
@@ -17,12 +16,14 @@ const Card = ({setCount,
   prix,
   sendArticleToBasket
 }) => {
+  const history = useHistory();
   const clickPanier = (e) => {
     e.preventDefault();
     const newCount = count+1;
-    setCount(newCount)
-    console.log(parseInt(e.target.id), newCount)
-    sendArticleToBasket(parseInt(e.target.id), newCount)
+    setCount(newCount);
+    sendArticleToBasket(parseInt(e.target.id), newCount);
+    let path = `/panier`; 
+    history.push(path);
 
   }
   return (
@@ -37,7 +38,6 @@ const Card = ({setCount,
             <img className="articles-section-infos-addCart" src={Cart} onClick={clickPanier} alt="panier" id={id}/>
           </div></Link>
     </form>
-      
   )
 }
 

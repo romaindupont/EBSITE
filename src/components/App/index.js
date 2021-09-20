@@ -9,7 +9,7 @@ import Articles from '../../containers/Articles';
 import Logo from '../../assets/img/logo2.png';
 import OneArticle from '../Articles/OneArticle';
 import Footer from '../Articles/footer';
-import Panier from '../Panier';
+import Panier from '../../containers/Panier';
 
 const App = () => {
   const [open, setOpen] = useState(false)

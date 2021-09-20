@@ -4,3 +4,15 @@ export const changeArticlesField = (newValue,key) => ({
   newValue,
   key,
 });
+
+export const SAVE_ARTICLE_ID = 'SAVE_ARTICLE_ID';
+export const saveArticleId = (id) => ({
+  type: SAVE_ARTICLE_ID,
+  id
+});
+
+export const DUST_ARTICLE = 'DUST_ARTICLE';
+export const dustArticle = (id) => ({
+  type: DUST_ARTICLE,
+  id
+});
