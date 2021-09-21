@@ -1,4 +1,4 @@
-import {CHANGE_ARTICLES_FIELD, SAVE_ARTICLE_ID, DUST_ARTICLE} from '../actions/articles';
+import {CHANGE_ARTICLES_FIELD, SAVE_ARTICLE_ID, DUST_ARTICLE, PLUS_ARTICLE, MINUS_ARTICLE} from '../actions/articles';
 import { SEND_ARTICLE_TO_BASKET } from "../actions/order";
 
 const initialState = {
@@ -58,6 +58,7 @@ const initialState = {
   panier: [
   ],
   id:'',
+  count: 0,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -73,18 +74,19 @@ const reducer = (state = initialState, action = {}) => {
       let jsonArticle = {
         'id': newArticleInBasket.id,
         'title': newArticleInBasket.title,
-        'quantity': 1,
+        'quantity': action.quantity,
         'price': newArticleInBasket.prix,
         'category': newArticleInBasket.category,
-        'picture':newArticleInBasket.picture
+        'picture':newArticleInBasket.picture,
+        'amount': newArticleInBasket.prix*action.quantity
       }
       return {
         ...state,
         panier: [
           ...state.panier,
           jsonArticle
-          
-        ]
+        ],
+        count: state.count+action.quantity
       }
       case SAVE_ARTICLE_ID:
         return {
@@ -95,7 +97,50 @@ const reducer = (state = initialState, action = {}) => {
         return {
           ...state,
           panier: state.panier.filter((item) => { return action.id !== item.id }),
+          count: state.count-action.quantity
         }
+      case PLUS_ARTICLE:
+        return {
+          ...state,
+          panier: state.panier.map(article => {
+            if(article.id === action.id) {
+              return {
+                id: article.id,
+                title: article.title,
+                quantity: article.quantity+action.quantity,
+                price: article.price,
+                category: article.category,
+                picture: article.picture,
+                amount: article.price*(article.quantity+action.quantity)
+              }
+            }
+            else {
+              return article;
+            }
+          }),
+          count: state.count+1
+        }
+        case MINUS_ARTICLE:
+          return {
+            ...state,
+            panier: state.panier.map(article => {
+              if(article.id === action.id) {
+                return {
+                  id: article.id,
+                  title: article.title,
+                  quantity: article.quantity-action.quantity,
+                  price: article.price,
+                  category: article.category,
+                  picture: article.picture,
+                  amount: article.price*(article.quantity-action.quantity)
+                }
+              }
+              else {
+                return article;
+              }
+            }),
+            count: state.count-1
+          }
     default:
       return state;
   }

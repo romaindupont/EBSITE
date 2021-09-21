@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from './Container';
+import Container from '../../containers/Panier/Container';
 import Payment from './Payment';
 import './style.scss';
 import { Link } from 'react-router-dom';

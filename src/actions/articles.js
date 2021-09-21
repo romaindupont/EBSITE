@@ -12,7 +12,22 @@ export const saveArticleId = (id) => ({
 });
 
 export const DUST_ARTICLE = 'DUST_ARTICLE';
-export const dustArticle = (id) => ({
+export const dustArticle = (id, quantity) => ({
   type: DUST_ARTICLE,
-  id
+  id, 
+  quantity
+});
+
+export const MINUS_ARTICLE = 'MINUS_ARTICLE';
+export const minusArticle = (id, quantity) => ({
+  type: MINUS_ARTICLE,
+  id,
+  quantity
+});
+
+export const PLUS_ARTICLE = 'PLUS_ARTICLE';
+export const plusArticle = (id, quantity) => ({
+  type: PLUS_ARTICLE,
+  id,
+  quantity
 });

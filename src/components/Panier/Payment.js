@@ -5,7 +5,7 @@ import './style.scss';
 const Payment = () => {
   return (
     <div className="payment">
-      <div className="checkout">Checkout montant total €</div>
+      <div className="checkout">Checkout montant total € TTC</div>
       
     </div>
   )

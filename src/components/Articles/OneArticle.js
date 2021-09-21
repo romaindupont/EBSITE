@@ -1,16 +1,17 @@
 /* eslint-disable eqeqeq */
 import React, { useState } from 'react';
 import BackArrow from '../../assets/img/back-arrow.svg';
-import { useHistory,useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import './styleOneArticle.scss';
 import articleData from '../../data/articleData';
 
-const OneArticle = ({setCount, count}) => {
+const OneArticle = ({sendArticleToBasket}) => {
   const [quantity, setQuantity] = useState(1);
+  const { id } = useParams();
+  const currentObject = articleData.find((article) => article.id == id);
   const clickPanier = (e) => {
     e.preventDefault();
-    const newCount = count + quantity;
-    setCount(newCount)
+    sendArticleToBasket( currentObject.id, quantity);
 
   };
   let history = useHistory();
@@ -28,7 +29,7 @@ const OneArticle = ({setCount, count}) => {
     let plus = quantity+1;
     setQuantity(plus)
   };
-  const { id } = useParams();
+  
   const redClick = () => {
     document.querySelector('.articles-detail-image--img').style.display = "block"
     document.querySelector('.articles-detail-image--img--1').style.display = "none"
@@ -44,7 +45,7 @@ const OneArticle = ({setCount, count}) => {
     document.querySelector('.articles-detail-image--img').style.display = "none"
     document.querySelector('.articles-detail-image--img--1').style.display = "none"
   }
-  const currentObject = articleData.find((article) => article.id == id);
+  
   return (
     <>
     <form type="submit" className="articles-detail">

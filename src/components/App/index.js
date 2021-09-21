@@ -7,13 +7,12 @@ import Menu from '../Menu';
 import Category from '../../containers/Category';
 import Articles from '../../containers/Articles';
 import Logo from '../../assets/img/logo2.png';
-import OneArticle from '../Articles/OneArticle';
-import Footer from '../Articles/footer';
+import OneArticle from '../../containers/Articles/OneArticle';
+import Footer from '../../containers/FooterMobile';
 import Panier from '../../containers/Panier';
 
 const App = () => {
   const [open, setOpen] = useState(false)
-  const [count, setCount] = useState(0);
   return (
     <>
       <img className="accueil-logo" src={Logo} alt=""/>
@@ -24,14 +23,15 @@ const App = () => {
         </Route>
         <Route exact path="/categories">
           <Category open={open}/>
+          <Footer />
         </Route>
         <Route exact path="/categories/:slug">
-          <Articles count={count} setCount={setCount} open={open}/>
-          <Footer count={count}/>
+          <Articles open={open}/>
+          <Footer />
         </Route>
         <Route path="/categories/articles/:id">
-          <OneArticle count={count} setCount={setCount} open={open}/>
-          <Footer count={count}/>
+          <OneArticle open={open}/>
+          <Footer />
         </Route>
         <Route path="/panier">
           <Panier />
