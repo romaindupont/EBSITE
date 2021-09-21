@@ -16,7 +16,7 @@ const Menu = ({open, setOpen}) => {
         <div className={classNames('menu-point-3', { 'menu-point-3--open': open })}></div>
         <div className={classNames('menu-point-4', { 'menu-point-4--open': open })}></div>
       </div>
-      <Navbar open={open}/>
+      <Navbar open={open} setOpen={setOpen} />
     </>
   )
 }

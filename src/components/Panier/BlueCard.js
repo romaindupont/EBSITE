@@ -1,8 +1,11 @@
 import React from 'react';
-import './style.scss';
-
+import './styleBlueCard.scss';
+import { CardNumberTest } from '../../utils/cardNumberTest';
 
 const BlueCard = () => {
+  const inputInfo = (e) => {
+    CardNumberTest(e.target.value);
+  }
   return (
     <div className="blueCard">
       <div className="blueCard-puce">
@@ -16,18 +19,19 @@ const BlueCard = () => {
         </div>
         <div className="cartePuce-connect">
           <span className="point"></span>
-          <span className="arcCercle"></span>
-          <span className="arcCercle"></span>
-          <span className="arcCercle"></span>
+          <span className="arcCercle--1"></span>
+          <span className="arcCercle--2"></span>
+          <span className="arcCercle--3"></span>
         </div>
       </div>
-      <img src="" alt="banque"></img>
-      <img src="" alt="cb"></img>
+      <div className="imageBanque"></div>
+      <div className="imageCb"></div>
+{/*       <img src="" alt="banque"></img>
+      <img src="" alt="cb"></img> */}
       <div className="triangle"></div>
-      <label className="text-cardNumber">
-        <input type="tel" maxlength="19" pattern="[0-9\s]{13,19}" placeholder="xxxx xxxx xxxx xxxx"></input>
-      </label>
-      <label className="text-cardDate">
+      <div className="triangle-inside"></div>
+      <input id="inputCard" className="cardNumber-input" type="tel" maxlength="19" name="cardNumber" onChange={inputInfo} placeholder="xxxxxxxxxxxxxxxx"></input>
+      <label className="text-cardDate">Expired
         <input type="date"></input>
       </label>
     </div>

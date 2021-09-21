@@ -9,14 +9,15 @@ const OneArticle = ({sendArticleToBasket}) => {
   const [quantity, setQuantity] = useState(1);
   const { id } = useParams();
   const currentObject = articleData.find((article) => article.id == id);
-  const clickPanier = (e) => {
-    e.preventDefault();
-    sendArticleToBasket( currentObject.id, quantity);
-
-  };
   let history = useHistory();
   const routeChange =()=> {
     history.goBack();
+  };
+  const clickPanier = (e) => {
+    e.preventDefault();
+    sendArticleToBasket( currentObject.id, quantity);
+    let path = `/panier`; 
+    history.push(path);
   };
   const minusClick = () => {
     let minus = quantity-1;

@@ -119,3 +119,24 @@
   color: black;
   cursor: pointer;
 }
+
+.payment {
+  background: rgb(43, 41, 41);
+  position: absolute;
+  bottom: 20px;
+  width: 100vw;
+  height: 5vh;
+  border-radius: 10px 10px 0px 0px;
+  transition: all 500ms;
+  &--open {
+    height: 50vh;
+  }
+}
+
+.checkout {
+  border: 5px solid white;
+  background: white;
+  width: 20%;
+  margin: 5px auto;
+  border-radius: 10px;
+}

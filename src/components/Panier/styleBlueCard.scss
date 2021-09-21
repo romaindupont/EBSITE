@@ -1,0 +1,163 @@
+.blueCard {
+  background: #000;
+  width: 90vw;
+  height: 30vh;
+  margin: 40px auto;
+  position: relative;
+  box-shadow: 0 1px grey, 2px 0 grey, 1px 2px grey, 2px 1px grey, 2px 3px grey, 3px 2px grey, 3px 4px grey, 4px 3px grey, -3px 5px grey, 5px -2px grey, 5px 6px grey, 6px 5px grey;
+
+  &-puce {
+    background: rgb(228, 222, 222);
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+  }
+}
+
+.cartePuce {
+
+  &-line1 {
+    border: 1px solid black;
+    position: absolute;
+    top: 6px;
+    width: 15px;
+  }
+  &-line2 {
+    border: 1px solid black;
+    position: absolute;
+    top: 15px;
+    width: 15px;
+  }
+  &-line3 {
+    border: 1px solid black;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 15px;
+  }
+  &-line4 {
+    border: 1px solid black;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 15px;
+  }
+  &-demiRond1 {
+    background: transparent;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 20% 20% 20% 20%;
+    position: absolute;
+    top: 2px;
+    left: 15px;
+  }
+  &-demiRond2 {
+    
+  }
+  &-connect {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 50px;
+    height: 25px;
+    background: transparent;
+  }
+}
+/* .point {
+  width: 7px;
+  height: 7px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 5px;
+} */
+.arcCercle--1 {
+  background: transparent;
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid white;
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  border-radius: 50%;
+}
+
+.arcCercle--2 {
+  background: transparent;
+  width: 15px;
+  height: 20px;
+  border-right: 3px solid white;
+  position: absolute;
+  left: 15px;
+  top: 2px;
+  border-radius: 50%;
+}
+
+.arcCercle--3 {
+  background: transparent;
+  width: 15px;
+  height: 25px;
+  border-right: 3px solid white;
+  position: absolute;
+  left: 24px;
+  top: 0px;
+  border-radius: 50%;
+}
+
+.triangle {
+  height: 5px;
+  width: 1px;
+  border-bottom: 35px solid #fff;
+  border-left: 35px solid transparent;
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  transform: rotate(135deg);
+
+
+  &-inside {
+    height: 5px;
+    width: 1px;
+    border-bottom: 25px solid #000;
+    border-left: 25px solid transparent;
+    position: absolute;
+    top: 135px;
+    left: 11px;
+    transform: rotate(135deg);
+  }
+}
+
+.imageBanque {
+  background: rgb(1, 1, 97);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 60px;
+}
+
+.imageCb {
+  background: rgb(4, 149, 168);
+  position: absolute;
+  top: 85px;
+  right: 18px;
+  width: 60px;
+  height: 40px;
+}
+
+.cardNumber-input {
+  position: absolute;
+  bottom: 75px;
+  left : 35px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  background: black;
+  color: rgb(228, 222, 222);
+  border: none;
+}
