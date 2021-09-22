@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styleBlueCard.scss';
-import { CardNumberTest } from '../../utils/cardNumberTest';
+import { CardNumberTest, DateTest, YearTest, CgvTest } from '../../utils/cardNumberTest';
+import classNames from 'classnames';
 
-const BlueCard = () => {
+const BlueCard = ({openPayment}) => {
+  const [ turnCard, setTurnCard ] = useState(false);
   const inputInfo = (e) => {
     CardNumberTest(e.target.value);
   }
+  const dateVerifyMonth = (e) => {
+    DateTest(e.target.value)
+  }
+  const dateVerifyYear = (e) => {
+    YearTest(e.target.value)
+  }
+  const verifyCgv = (e) => {
+    CgvTest(e.target.value)
+  }
+  const paiementConfirmation = (e) => {
+    e.preventDefault();
+    console.log(e.target.form.cardNumber.value,e.target.form.month.value,e.target.form.year.value,e.target.form.select.value,e.target.form.surname.value,e.target.form.name.value ,e.target.form.cgv.value)
+  }
   return (
+    <form className={classNames("card", {"card--open":openPayment})} type="submit">
     <div className="blueCard">
+    <div className="blueCard-face">
       <div className="blueCard-puce">
         <div className="cartePuce">
           <span className="cartePuce-line1"></span>
@@ -26,15 +43,29 @@ const BlueCard = () => {
       </div>
       <div className="imageBanque"></div>
       <div className="imageCb"></div>
-{/*       <img src="" alt="banque"></img>
-      <img src="" alt="cb"></img> */}
       <div className="triangle"></div>
-      <div className="triangle-inside"></div>
-      <input id="inputCard" className="cardNumber-input" type="tel" maxlength="19" name="cardNumber" onChange={inputInfo} placeholder="xxxxxxxxxxxxxxxx"></input>
-      <label className="text-cardDate">Expired
-        <input type="date"></input>
-      </label>
+      <div className="triangle-inside" onClick={()=> setTurnCard(!turnCard)}></div>
+      <input id="inputCard" className="cardNumber-input" type="tel" maxLength="19" name="cardNumber" onChange={inputInfo} placeholder="xxxxxxxxxxxxxxxx"></input>
+      <label className="text-cardDate">Expired</label>
+      <input id="inputDate--month" className="cardDate-input--month" type="text" name="month" maxLength="2" onChange={dateVerifyMonth} placeholder="mm"></input>
+      <span className="cardDate-input--span">/</span>
+      <input id="inputDate--year" className="cardDate-input--year" type="text" name="year" maxLength="2" onChange={dateVerifyYear} placeholder="aa"></input>
+      <select className="optionCivil" name="select">
+        <option value="">Civil.</option>
+        <option value="Monsieur">M.</option>
+        <option value="Madame">Mme</option>
+      </select>
+      <input id="inputSurname" className="inputName--surname" type="text" placeholder="Prénom" name="surname" ></input>
+      <input id="inputName" className="inputName--name" type="text"  placeholder="Nom" name="name"></input>
     </div>
+    <div className={classNames("blueCard-back", {"blueCard-back--turn":turnCard})}>
+      <div className="blueCard-back--rectangle"></div>
+      <label className="blueCard-back--label">CGV</label>
+      <input id="cgv" className="blueCard-back--cgv" name="cgv" type="text" maxLength="3" placeholder="xxx" onChange={verifyCgv}></input>
+    </div>
+    </div>
+    <button className="paiement-button" onClick={paiementConfirmation}>Confirmer le paiement</button>
+    </form>
   )
 }
 

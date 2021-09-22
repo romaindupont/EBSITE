@@ -1,0 +1,65 @@
+.form-connexion {
+  display: none;
+  width: 90vw;
+  margin: auto;
+  height: 255px;
+  &--open {
+    display: block;
+  }
+  &-title {
+    color: rgb(228, 222, 222);
+    text-align: center;
+    font-family: "Bungee", cursive;
+    font-size: 0.9rem;
+  }
+
+  &-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form-connexion-label--email {
+  color: rgb(228, 222, 222);
+  font-family: "Bungee", cursive;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.form-connexion-input--email{
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.form-connexion-label--password {
+  color: rgb(228, 222, 222);
+  font-family: "Bungee", cursive;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.form-connexion-input--password{
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.form-connexion-button {
+  display: flex;
+  margin: auto;
+  font-size: 0.8rem;
+  background: #bbdfc8;
+  border-radius: 5px;
+  padding: 0.2rem;
+  font-family: "Bungee", cursive;
+  margin-bottom: 1rem;
+}
+
+.form-connexion-register {
+  display: flex;
+  justify-content: center;
+  color: #bbdfc8;
+}

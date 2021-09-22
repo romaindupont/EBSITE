@@ -1,21 +1,56 @@
+.card {
+  width: 90vw;
+  height: 30vh;
+  margin: 40px auto;
+  perspective: 1000px;
+  display: none;
+  &--open {
+    display: block;
+  }
+}
+
 .blueCard {
+  width: 90vw;
+  height: 30vh;
+  position: relative;
+  margin: 40px auto;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.blueCard-face {
   background: #000;
   width: 90vw;
   height: 30vh;
   margin: 40px auto;
-  position: relative;
+  position: absolute;
   box-shadow: 0 1px grey, 2px 0 grey, 1px 2px grey, 2px 1px grey, 2px 3px grey, 3px 2px grey, 3px 4px grey, 4px 3px grey, -3px 5px grey, 5px -2px grey, 5px 6px grey, 6px 5px grey;
+}
 
-  &-puce {
-    background: rgb(228, 222, 222);
-    width: 50px;
-    height: 25px;
-    border-radius: 5px;
-    position: absolute;
-    top: 25px;
-    left: 10px;
+.blueCard-back {
+  display: none;
+  background: rgb(228, 222, 222);
+  width: 90vw;
+  height: 30vh;
+  margin: 40px auto;
+  position: absolute;
+  
+
+  &--turn {
+    display: block;
+  
   }
 }
+.blueCard-puce {
+  background: rgb(228, 222, 222);
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  position: absolute;
+  top: 25px;
+  left: 10px;
+}
+
 
 .cartePuce {
 
@@ -112,12 +147,13 @@
 .triangle {
   height: 5px;
   width: 1px;
-  border-bottom: 35px solid #fff;
+  border-bottom: 35px solid rgb(228, 222, 222);
   border-left: 35px solid transparent;
   position: absolute;
   top: 130px;
   left: 10px;
   transform: rotate(135deg);
+  z-index: 5;
 
 
   &-inside {
@@ -129,6 +165,7 @@
     top: 135px;
     left: 11px;
     transform: rotate(135deg);
+    z-index: 5;
   }
 }
 
@@ -152,12 +189,114 @@
 
 .cardNumber-input {
   position: absolute;
-  bottom: 75px;
-  left : 35px;
+  bottom: 95px;
+  left: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: "Bungee", cursive;
+  background: black;
+  color: #e4dede;
+  border: none;
+}
+
+.cardDate-input--month {
+  position: absolute;
+  bottom: 65px;
+  left : 130px;
   font-size: 0.8rem;
   text-align: center;
   font-family: 'Bungee', cursive;
   background: black;
   color: rgb(228, 222, 222);
   border: none;
+  width: 50px;
+}
+.cardDate-input--span {
+  position: absolute;
+  bottom: 65px;
+  left : 175px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  background: black;
+  color: rgb(228, 222, 222);
+  border: none;
+  width: 15px;
+}
+.cardDate-input--year {
+  position: absolute;
+  bottom: 65px;
+  left : 185px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  background: black;
+  color: rgb(228, 222, 222);
+  border: none;
+  width: 50px;
+}
+
+.text-cardDate {
+  position: absolute;
+  bottom: 77px;
+  color: rgb(228, 222, 222);
+  font-size: 0.8rem;
+  position: absolute;
+  left: 85px;
+}
+
+.inputName--surname {
+  position: absolute;
+  bottom: 20px;
+  left: 105px;
+  width: 80px;
+  font-family: "Bungee", cursive;
+  background: black;
+  color: #e4dede;
+  border: none;
+}
+
+.inputName--name {
+  position: absolute;
+  bottom: 20px;
+  left: 190px;
+  width: 100px;
+  font-family: "Bungee", cursive;
+  background: black;
+  color: #e4dede;
+  border: none;
+}
+
+.optionCivil {
+  position: absolute;
+  bottom: 20px;
+  left: 45px;
+  width: 50px;
+  font-family: "Bungee", cursive;
+  background: black;
+  color: #e4dede;
+  border: none;
+}
+
+.blueCard-back--rectangle {
+  width: 90vw;
+  background: #000;
+  height: 30px;
+  position: absolute;
+  top: 25px;
+}
+.blueCard-back--label {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  font-family: "Bungee", cursive;
+}
+.blueCard-back--cgv {
+  position: absolute;
+  top: 96px;
+  left: 200px;
+  font-size: 1rem;
+  width: 50px;
+  font-family: "Bungee", cursive;
+  color: #000;
 }

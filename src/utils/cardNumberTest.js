@@ -12,3 +12,45 @@ export function CardNumberTest (myValue) {
     /* psdError.textContent="Mot de passe invalide"; */
   }
 };
+
+export function DateTest (month) {
+  const regex = /^0[1-9]|1[0-2]/;
+  const inputDateMonth = document.getElementById('inputDate--month');
+  /* const psdError = document.getElementById('errorPassword'); */
+  if (regex.test(month)) {
+    inputDateMonth.style.color="rgb(228, 222, 222)";
+   /*  psdError.textContent="Mot de passe valide"; */
+  }
+  else {
+    inputDateMonth.style.color="red";
+    /* psdError.textContent="Mot de passe invalide"; */
+  }
+};
+
+export function YearTest (year) {
+  const regexYear =/^\d{2}/;
+  const inputDateYear = document.getElementById('inputDate--year');
+  /* const psdError = document.getElementById('errorPassword'); */
+  if (regexYear.test(year)) {
+    inputDateYear.style.color="rgb(228, 222, 222)";
+   /*  psdError.textContent="Mot de passe valide"; */
+  }
+  else {
+    inputDateYear.style.color="red";
+    /* psdError.textContent="Mot de passe invalide"; */
+  }
+};
+
+export function CgvTest (cgv) {
+  const regex =/^\d{3}/;
+  const inputCgv = document.getElementById('cgv');
+  /* const psdError = document.getElementById('errorPassword'); */
+  if (regex.test(cgv)) {
+    inputCgv.style.color="rgb(228, 222, 222)";
+   /*  psdError.textContent="Mot de passe valide"; */
+  }
+  else {
+    inputCgv.style.color="red";
+    /* psdError.textContent="Mot de passe invalide"; */
+  }
+};
