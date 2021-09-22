@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
-const Navbar = ({open, setOpen}) => {
+const Navbar = ({open, setOpen, isConnected}) => {
   const closeMenu = () => {
     setOpen(false);
   }
@@ -13,7 +13,8 @@ const Navbar = ({open, setOpen}) => {
           <Link className="menu-nav--link" to="/" onClick={closeMenu}>Accueil</Link>
           <Link className="menu-nav--link" to="/a_propos" onClick={closeMenu}>A propos</Link>
           <Link className="menu-nav--link" to="/categories/all" onClick={closeMenu}>e-shop</Link>
-          <Link className="menu-nav--link" to="/moncompte" onClick={closeMenu}>Mon compte</Link>
+          {isConnected && (<Link className="menu-nav--link" to="/moncompte" onClick={closeMenu}>Mon compte</Link>)}
+          {!isConnected && (<Link className="menu-nav--link" to="/register" onClick={closeMenu}>Inscription</Link>)}
           <Link className="menu-nav--link" to="/categories" onClick={closeMenu}>Catégories</Link>
           <Link className="menu-nav--link" to="/contact" onClick={closeMenu}>Contact</Link>
           

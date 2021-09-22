@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import classNames from 'classnames';
 import BlueCard from './BlueCard';
-import Connexion from '../Connexion';
+import Connexion from '../../containers/Connexion';
 
 const Payment = ({isConnected}) => {
   const [openPayment, setOpenPaiment] = useState(false);

@@ -1,4 +1,4 @@
-/* import { SEND_ARTICLE_TO_BASKET } from "../actions/order"; */
+import { LOGIN, CHANGE_VALUE } from "../actions/user";
 
 const initialState = {
   /* panier: [], */
@@ -11,11 +11,16 @@ const initialState = {
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    /* case SEND_ARTICLE_TO_BASKET:
+    case LOGIN:
       return {
         ...state,
-      listArticles: state.articlesList.filter((article)=> article.title.toLowerCase().replace(/é|è|ê/g,"e").includes(action.newValue)),
-      } */
+        isConnected: true,
+      }
+    case CHANGE_VALUE:
+      return {
+        ...state,
+        [action.key]: action.newValue,
+      };
     default:
       return state;
   }

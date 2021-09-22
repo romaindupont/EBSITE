@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 //import { Switch, Route, Redirect } from 'react-router-dom';
 //import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import AccueilMobile from '../AccueilMobile';
 import Menu from '../Menu';
 import Category from '../../containers/Category';
@@ -10,8 +10,10 @@ import Logo from '../../assets/img/logo2.png';
 import OneArticle from '../../containers/Articles/OneArticle';
 import Footer from '../../containers/FooterMobile';
 import Panier from '../../containers/Panier';
+import Connexion from '../../containers/Connexion';
+import Register from '../Register';
 
-const App = () => {
+const App = ({isConnected}) => {
   const [open, setOpen] = useState(false)
   return (
     <>
@@ -36,6 +38,19 @@ const App = () => {
         <Route path="/panier">
           <Panier />
         </Route>
+        <Route path="/connexion">
+          <Connexion openPayment={true}/>
+          <Footer />
+        </Route>
+        <Route path="/register">
+          <Register />
+          <Footer />
+        </Route>
+          <Route path="/moncompte">
+              {!isConnected ? <Redirect to="/connexion" /> : <div>mon compte</div>}
+          </Route>
+        
+        
       </Switch>
     </>
     

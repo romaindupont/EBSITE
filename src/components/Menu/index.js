@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from '../../containers/Menu/Navbar';
 import './style.scss';
 import classNames from 'classnames';
 

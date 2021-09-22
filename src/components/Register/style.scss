@@ -1,0 +1,39 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  
+  height: 80vh;
+
+  &-title {
+    text-align: center;
+  }
+}
+.register-div {
+  overflow-x: scroll;
+}
+.register-label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0.3rem 0.5rem 0.3rem 0.5rem;
+
+
+  & > input {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1.2rem;
+
+  }
+  
+}
+.registration-input:focus {
+  outline: none;
+  border: 2px solid #bbdfc8;
+}
+.register-button {
+  margin: 2rem 5rem;
+  padding: 1.2rem;
+  background: #bbdfc8;
+  font-family: "Bungee", cursive;
+  border-radius: 5px;
+}
