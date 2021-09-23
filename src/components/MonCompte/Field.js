@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import { inputTest } from '../../utils/TestInput';
 
+
 const Field = ({changeValue, type, placeholder,name, minLength, maxLength, currentValue ,value}) => {
   const handleChange = (e) => {
     changeValue(e.target.value)
@@ -21,7 +22,7 @@ const Field = ({changeValue, type, placeholder,name, minLength, maxLength, curre
       id={name}
       required
     />
-
+    
   </>
   )
 }

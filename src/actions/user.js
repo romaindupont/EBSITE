@@ -32,9 +32,8 @@ export const changeUserPassword = (id, password) => ({
 });
 
 export const CHANGE_USER_INFOS = 'CHANGE_USER_INFOS';
-export const changeUserInfos = (id, email, name, surname, adresse, cp, tel, ville) => ({
+export const changeUserInfos = (email, name, surname, adresse, cp, tel, ville) => ({
   type: CHANGE_USER_INFOS,
-  id,
   email,
   name,
   surname,

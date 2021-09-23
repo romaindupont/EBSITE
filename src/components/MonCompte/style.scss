@@ -20,3 +20,35 @@ li {
 .monCompte > h2 {
   text-align: center;
 }
+
+#error {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.image-passwordVisibility {
+  width: 75%;
+}
+.passwordVisibility {
+  position: absolute;
+  top: 192px;
+  right: 38px;
+}
+.passwordVisibility:hover > .tooltip {
+  visibility: visible;
+ }
+
+.tooltip {
+  visibility: hidden;
+  width: 130px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  top: -38px;
+  left: -70px;
+  z-index: 99;
+}

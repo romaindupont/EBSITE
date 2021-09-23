@@ -13,7 +13,7 @@ import Panier from '../../containers/Panier';
 import Connexion from '../../containers/Connexion';
 import Register from '../Register';
 import MonCompte from '../MonCompte';
-import PasswordModification from '../MonCompte/PasswordModification';
+import PasswordModification from '../../containers/MonCompte/PasswordModification';
 import InformationsChange from '../../containers/MonCompte/InformationsChange';
 
 const App = ({isConnected}) => {

@@ -81,10 +81,9 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         userList: state.userList.map(user => {
-          if (user.id === action.id) {
+          if (user.email === action.email) {
             return {
               email: action.email,
-              password: action.password,
               surname: action.surname,
               name:action.name,
               adresse: action.adresse,
