@@ -7,6 +7,7 @@ const mapStateToProps = (state) => ({
  DataCategory: state.category.categoryList,
  categoryNames: state.category.categoryName,
  list: state.category.list,
+ userInfo: state.user.userInfo
 });
 
 const mapDispatchToProps = (dispatch)=> ({

@@ -1,0 +1,22 @@
+.monCompte {
+  display: flex;
+  flex-direction: column;
+
+  &-lien {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  &-link {
+    color: #000;
+    
+  }
+}
+
+li {
+  margin: 1rem 0;
+}
+
+.monCompte > h2 {
+  text-align: center;
+}

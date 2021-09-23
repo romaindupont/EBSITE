@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import Connexion from '../../components/Connexion';
 import { changeValue, login } from '../../actions/user';
 
-const mapStateToProps = null/* (state) => ({
-  
-}); */
+const mapStateToProps = (state) => ({
+  userInfo: state.user.userInfo
+ });
 
 const mapDispatchToProps = (dispatch)=> ({
   changeValue: (newValue, name) => {

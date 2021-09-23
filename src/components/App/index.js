@@ -12,6 +12,9 @@ import Footer from '../../containers/FooterMobile';
 import Panier from '../../containers/Panier';
 import Connexion from '../../containers/Connexion';
 import Register from '../Register';
+import MonCompte from '../MonCompte';
+import PasswordModification from '../MonCompte/PasswordModification';
+import InformationsChange from '../../containers/MonCompte/InformationsChange';
 
 const App = ({isConnected}) => {
   const [open, setOpen] = useState(false)
@@ -47,9 +50,17 @@ const App = ({isConnected}) => {
           <Footer />
         </Route>
           <Route path="/moncompte">
-              {!isConnected ? <Redirect to="/connexion" /> : <div>mon compte</div>}
+              {!isConnected ? <Redirect to="/connexion" /> : <MonCompte />}
+              <Footer />
           </Route>
-        
+          <Route path="/passwordChange">
+              {!isConnected ? <Redirect to="/connexion" /> : <PasswordModification />}
+              <Footer />
+          </Route>
+          <Route path="/informations">
+              {!isConnected ? <Redirect to="/connexion" /> : <InformationsChange />}
+              <Footer />
+          </Route>
         
       </Switch>
     </>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import Field from '../../containers/Register/Field'
+import Field from '../../containers/Register/Field';
 
 const Register = () => {
   return (
@@ -21,7 +21,7 @@ const Register = () => {
       <label className="register-label">Password
       <Field 
         /* value={} */
-        type="password"
+        type="password" 
         placeholder="votre mot de passe"
         inputName="password"
         minLength="8"
@@ -88,6 +88,16 @@ const Register = () => {
         inputName="tel"
         minLength="10"
         maxLength="10"
+      />
+      </label>
+      <label className="register-label">Ville
+      <Field 
+        /* value={} */
+        type="text"
+        placeholder="votre ville"
+        inputName="ville"
+        minLength="1"
+        maxLength="50"
       />
       </label>
       </div>
