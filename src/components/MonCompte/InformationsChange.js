@@ -33,7 +33,6 @@ const InformationsChange = ({userInfo, changeUserInfos}) => {
     if (e.target.form.ville.value !== '') {
       newVille = e.target.form.ville.value;
     }
-    console.log(newEmail,newName,newSurname,newAdresse,newCp,newTel,newVille)
     changeUserInfos(newEmail,newName,newSurname,newAdresse,newCp,newTel,newVille)
   }
   return (

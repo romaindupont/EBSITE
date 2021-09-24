@@ -300,3 +300,15 @@
   font-family: "Bungee", cursive;
   color: #000;
 }
+
+.paiement-button {
+  visibility: hidden;
+  &--turn {
+    visibility: visible;
+    display: flex;
+    margin: 45px auto;
+    padding: 0.4rem;
+    border-radius: 5px;
+    background: #bbdfc8;
+  }
+}

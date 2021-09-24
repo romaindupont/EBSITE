@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 
 
 const Panier = ({panier, saveArticleId, dustArticle}) => {
+  let totalAmount = 0;
+  panier.forEach(element => {
+    totalAmount += element.amount
+    
+  })
   return (
     <>
     <div className="panier">
@@ -14,9 +19,10 @@ const Panier = ({panier, saveArticleId, dustArticle}) => {
       <div className="container-panier">
         {panier.map((article) => <Container key={article.id} {...article} saveArticleId={saveArticleId} corbeille={dustArticle} />)}
       </div>
+      <div className="montant">Montant à payer : {totalAmount.toFixed(2)}€</div>
 
     </div>
-  <Payment />
+  <Payment totalAmount={totalAmount}/>
   </>
   )
 }

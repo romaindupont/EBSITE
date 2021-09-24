@@ -1,9 +1,11 @@
+import { ORDERING } from "../actions/order";
+
 const initialState = {
   orderList: [
     {
       id: 1,
-      numeroCde: 'EB23-09-21-1',
-      dateCommande: 23/09/2021,
+      numeroCde: 1,
+      dateCommande: '23/09/2021',
       user_id: 1,
       order: [
         {
@@ -20,13 +22,14 @@ const initialState = {
         },
       ],
       infoCde: 'Livré',
-      dateLivraison: 25/09/2021,
+      dateLivraison: '25/09/2021',
+      totalAmount: 140
 
     },
     {
       id: 1,
-      numeroCde: 'EB10-09-21-2',
-      dateCommande: 10/09/2021,
+      numeroCde: 2,
+      dateCommande: '10/09/2021',
       user_id: 1,
       order: [
         {
@@ -37,20 +40,33 @@ const initialState = {
         },
       ],
       infoCde: 'en livraison',
-      dateLivraison: 20/09/2021,
+      dateLivraison: '20/09/2021',
+      totalAmount: 110
 
     }
   ],
-  
+  numeroCde:2,
 };
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    /* case SEND_ARTICLE_TO_BASKET:
+    case ORDERING:
       return {
         ...state,
-      listArticles: state.articlesList.filter((article)=> article.title.toLowerCase().replace(/é|è|ê/g,"e").includes(action.newValue)),
-      } */
+        orderList: [
+          ...state.orderList,
+          {
+            id: action.orderNumber,
+            numeroCde: action.orderNumber,
+            dateCommande: action.date,
+            user_id: action.user_id,
+            order: action.orderList,
+            infoCde: action.infoCde,
+            dateLivraison: action.dateLivraison,
+            totalAmount: action.totalAmount
+          }
+        ]
+      }
     default:
       return state;
   }

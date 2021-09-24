@@ -96,6 +96,16 @@ const reducer = (state = initialState, action = {}) => {
             return user;
           }
         }),
+        userInfo: {
+              email: action.email,
+              surname: action.surname,
+              name:action.name,
+              adresse: action.adresse,
+              cp: action.cp,
+              tel: action.tel,
+              ville: action.ville
+            }
+
       }
     default:
       return state;

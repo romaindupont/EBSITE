@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './styleBlueCard.scss';
 import { CardNumberTest, DateTest, YearTest, CgvTest } from '../../utils/cardNumberTest';
 import classNames from 'classnames';
+import { useHistory } from 'react-router-dom';
 
-const BlueCard = ({openPayment}) => {
+const BlueCard = ({openPayment, numeroCde, ordering, totalAmount, panier, userInfo, orderList}) => {
+  let history = useHistory();
   const [ turnCard, setTurnCard ] = useState(false);
   const inputInfo = (e) => {
     CardNumberTest(e.target.value);
@@ -19,7 +21,19 @@ const BlueCard = ({openPayment}) => {
   }
   const paiementConfirmation = (e) => {
     e.preventDefault();
-    console.log(e.target.form.cardNumber.value,e.target.form.month.value,e.target.form.year.value,e.target.form.select.value,e.target.form.surname.value,e.target.form.name.value ,e.target.form.cgv.value)
+    if(e.target.form.cardNumber.value !== '' & e.target.form.month.value !== '' & e.target.form.year.value!== '' & e.target.form.select.value !== '' & e.target.form.surname.value !== '' & e.target.form.name.value !== '' & e.target.form.cgv.value !== '' ) {
+      // paiement stripe
+      console.log(e.target.form.cardNumber.value,e.target.form.month.value,e.target.form.year.value,e.target.form.select.value,e.target.form.surname.value,e.target.form.name.value ,e.target.form.cgv.value)
+      const newOrder = numeroCde + 1;
+      let elementId = 0;
+      const orderBasket = []
+      panier.forEach(element => { orderBasket.push({'id': elementId=elementId+1, 'article_id': element.id,'quantity':element.quantity,'amount':element.amount});
+      });
+      ordering(newOrder, orderBasket, Date.now(),userInfo.id, 'Enregistrée', '10/10/2021', totalAmount)
+      console.log(orderList)
+      let path = `/facture/${newOrder}`; 
+      history.push(path);
+    }
   }
   return (
     <form className={classNames("card", {"card--open":openPayment})} type="submit">
@@ -64,7 +78,7 @@ const BlueCard = ({openPayment}) => {
       <input id="cgv" className="blueCard-back--cgv" name="cgv" type="text" maxLength="3" placeholder="xxx" onChange={verifyCgv}></input>
     </div>
     </div>
-    <button className="paiement-button" onClick={paiementConfirmation}>Confirmer le paiement</button>
+    <button className={classNames("paiement-button", {"paiement-button--turn":turnCard})} onClick={paiementConfirmation}>Confirmer le paiement</button>
     </form>
   )
 }

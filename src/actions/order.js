@@ -6,10 +6,13 @@ export const sendArticleToBasket = (article_id, quantity) => ({
 });
 
 export const ORDERING = 'ORDERING';
-export const ordering = (orderNumber, orderList, date, user_id) => ({
+export const ordering = (orderNumber, orderList, date, user_id, infoCde, dateLivraison, totalAmount) => ({
   type: ORDERING,
   orderNumber,
   orderList,
   date,
-  user_id
+  user_id,
+  infoCde,
+  dateLivraison,
+  totalAmount
 });

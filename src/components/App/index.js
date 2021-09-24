@@ -15,6 +15,7 @@ import Register from '../Register';
 import MonCompte from '../MonCompte';
 import PasswordModification from '../../containers/MonCompte/PasswordModification';
 import InformationsChange from '../../containers/MonCompte/InformationsChange';
+import Facture from '../../containers/Facture';
 
 const App = ({isConnected}) => {
   const [open, setOpen] = useState(false)
@@ -59,6 +60,10 @@ const App = ({isConnected}) => {
           </Route>
           <Route path="/informations">
               {!isConnected ? <Redirect to="/connexion" /> : <InformationsChange />}
+              <Footer />
+          </Route>
+          <Route path="/facture/:id">
+              {!isConnected ? <Redirect to="/connexion" /> : <Facture />}
               <Footer />
           </Route>
         
