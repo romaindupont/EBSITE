@@ -13,10 +13,9 @@ export const changeValue = (newValue, key) => ({
 });
 
 export const NEW_USER = 'NEW_USER';
-export const newUser = (email, password, name, surname, adresse, cp, tel) => ({
+export const newUser = (email, name, surname, adresse, cp, tel) => ({
   type: NEW_USER,
   email,
-  password,
   name,
   surname,
   adresse,

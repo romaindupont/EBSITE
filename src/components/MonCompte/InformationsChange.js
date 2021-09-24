@@ -2,7 +2,40 @@ import React from 'react';
 import './style.scss';
 import Field from '../../containers/MonCompte/Field';
 
-const InformationsChange = ({userInfo}) => {
+const InformationsChange = ({userInfo, changeUserInfos}) => {
+  const validationData = (e) => {
+    e.preventDefault()
+    let newEmail = userInfo.email;
+    let newName = userInfo.name;
+    let newSurname = userInfo.surname;
+    let newAdresse = userInfo.adresse;
+    let newCp = userInfo.cp;
+    let newTel = userInfo.tel;
+    let newVille = userInfo.ville;
+    if (e.target.form.email.value !== '') {
+      newEmail = e.target.form.email.value;
+    }
+    if (e.target.form.name.value !== '') {
+      newName = e.target.form.name.value;
+    }
+    if (e.target.form.surname.value !== '') {
+      newSurname = e.target.form.surname.value;
+    }
+    if (e.target.form.adresse.value !== '') {
+      newAdresse = e.target.form.adresse.value;
+    }
+    if (e.target.form.cp.value !== '') {
+      newCp = e.target.form.cp.value;
+    }
+    if (e.target.form.tel.value !== '') {
+      newTel = e.target.form.tel.value;
+    }
+    if (e.target.form.ville.value !== '') {
+      newVille = e.target.form.ville.value;
+    }
+    console.log(newEmail,newName,newSurname,newAdresse,newCp,newTel,newVille)
+    changeUserInfos(newEmail,newName,newSurname,newAdresse,newCp,newTel,newVille)
+  }
   return (
     <form className="register" type="submit">
     <div className="register-div">
@@ -65,13 +98,13 @@ const InformationsChange = ({userInfo}) => {
       <Field 
         type="text"
         placeholder={userInfo.ville}
-        inputName="ville"
+        name="ville"
         minLength="1"
         maxLength="50"
       />
       </label>
       </div>
-      <button className="register-button">Valider</button>
+      <button className="register-button" onClick={validationData}>Valider</button>
     </form>
   )
 }

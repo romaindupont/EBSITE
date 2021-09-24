@@ -20,7 +20,6 @@ const Field = ({changeValue, type, placeholder,name, minLength, maxLength, curre
       minLength={minLength}
       maxLength={maxLength}
       id={name}
-      required
     />
     
   </>

@@ -6,7 +6,6 @@ import CategoryList from './CategoryList';
 import './style.scss';
 
 const Category = ({open,DataCategory,changeCategoryField, list, userInfo}) => {
-  console.log(userInfo)
   return (
     <div className={classNames("category", {"category--open":open})}>
       <SearchBar name="categoryName" changeField={changeCategoryField}/>

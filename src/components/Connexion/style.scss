@@ -63,3 +63,15 @@
   justify-content: center;
   color: #bbdfc8;
 }
+
+.image-passwordVisibility-connexion {
+  width: 75%;
+}
+.passwordVisibility-connexion {
+  position: absolute;
+  top: 250px;
+  right: 50px;
+}
+.passwordVisibility-connexion:hover > .tooltip {
+  visibility: visible;
+ }

@@ -4,7 +4,8 @@ import Connexion from '../../components/Connexion';
 import { changeValue, login } from '../../actions/user';
 
 const mapStateToProps = (state) => ({
-  userInfo: state.user.userInfo
+  userInfo: state.user.userInfo,
+  userList: state.user.userList
  });
 
 const mapDispatchToProps = (dispatch)=> ({
