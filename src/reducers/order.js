@@ -65,7 +65,8 @@ const reducer = (state = initialState, action = {}) => {
             dateLivraison: action.dateLivraison,
             totalAmount: action.totalAmount
           }
-        ]
+        ],
+        numeroCde: action.orderNumber
       }
     default:
       return state;

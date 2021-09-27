@@ -29,8 +29,9 @@ const BlueCard = ({openPayment, numeroCde, ordering, totalAmount, panier, userIn
       const orderBasket = []
       panier.forEach(element => { orderBasket.push({'id': elementId=elementId+1, 'article_id': element.id,'quantity':element.quantity,'amount':element.amount});
       });
+      const newDate = Date.now();
+      
       ordering(newOrder, orderBasket, Date.now(),userInfo.id, 'Enregistrée', '10/10/2021', totalAmount)
-      console.log(orderList)
       let path = `/facture/${newOrder}`; 
       history.push(path);
     }
