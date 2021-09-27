@@ -29,12 +29,21 @@
     font-family: 'Roboto', sans-serif;
     margin:0;
     text-transform: uppercase;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
   }
   &-small {
     color: rgba(0,0,0, 0.4);
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
   &-price {
     font-weight: 900;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
   }
   &-addCart {
     width: 7%;
@@ -55,6 +64,9 @@
 
 .caddy,.home,.account {
   width: 30px;
+  @media (min-width: 768px) {
+    width: 50px;
+}
 }
 .caddy {
   position: relative;
@@ -70,6 +82,9 @@
   position:fixed;
   bottom:0;
   padding-top: 1rem;
+  @media (min-width: 768px) {
+    height: 100px;
+  }
 }
 
 .section {
@@ -87,8 +102,13 @@
   border-radius: 50%;
   z-index: -1;
   color: white;
-  padding-bottom: 0.2rem
-
+  padding-bottom: 0.2rem;
+  @media (min-width: 768px) {
+    top: -18px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+  }
 }
 a {
   text-decoration: none;

@@ -12,9 +12,9 @@ const Facture = ({orderList, numeroCde, articlesList}) => {
   return (
     <>
     <div className="panier">
-      <Link to='/categories' className="panier-retour" >Continuer mes achats</Link>
+      <Link to='/mesCommandes' className="panier-retour" >Revenir à la liste</Link>
       <h2 className="panier-titre">Ma Facture</h2>
-        <p>Ta commande numéro : {Invoice.numeroCde}</p>
+        <p>Commande numéro : {Invoice.numeroCde}</p>
         <p>Date de commande : {Invoice.dateCommande}</p>
         <p>Montant Payé : {Invoice.totalAmount.toFixed(2)} €</p>
         <p>Information Commande : {Invoice.infoCde}</p>

@@ -1,4 +1,4 @@
-import { ORDERING } from "../actions/order";
+import { ORDERING, ORDER_NUMBER_SELECT } from "../actions/order";
 
 const initialState = {
   orderList: [
@@ -27,7 +27,7 @@ const initialState = {
 
     },
     {
-      id: 1,
+      id: 2,
       numeroCde: 2,
       dateCommande: '10/09/2021',
       user_id: 1,
@@ -66,6 +66,11 @@ const reducer = (state = initialState, action = {}) => {
             totalAmount: action.totalAmount
           }
         ],
+        numeroCde: action.orderNumber
+      }
+    case ORDER_NUMBER_SELECT:
+      return {
+        ...state,
         numeroCde: action.orderNumber
       }
     default:

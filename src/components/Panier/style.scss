@@ -13,6 +13,9 @@
   &-infos {
     margin-right: 1rem;
     width: 100px;
+    @media (min-width: 768px) {
+      width: 300px;
+    }
   }
 }
 .panier-container-img {
@@ -20,31 +23,45 @@
   height: 60px;
   border: 1px solid #bbdfc8;
   margin: auto 1rem;
+  @media (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .panier-container-reference {
   font-size: 1rem;
   margin: 0;
   margin-bottom: 0.4rem;
-
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 
 }
 
 .panier-container-category{
   font-size: 0.7rem;
   margin: 0;
-
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .panier-container-quantity {
   /* margin-left: 2rem; */
   /* margin-right: 2rem; */
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .panier-container-montant {
   position: absolute;
   right: 0;
   margin-right: 3rem;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .panier-container-add {
@@ -56,7 +73,9 @@
   color: white;
   padding: 1.7rem;
   transition: right 700ms cubic-bezier(.28,1.29,.89,.65);
-
+  @media (min-width: 768px) {
+    padding: 2.2rem;
+  }
   &--minus {
     font-size: 1rem;
     width: 30px;
@@ -64,6 +83,11 @@
     border-radius: 50%;
     border: 1px solid white;
     text-align: center;
+    @media (min-width: 768px) {
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+    }
   }
   &--plus {
     font-size: 1rem;
@@ -72,12 +96,20 @@
     border-radius: 50%;
     border: 1px solid white;
     text-align: center;
+    @media (min-width: 768px) {
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+    }
   }
   &--quantity {
     font-size: 1rem;
     text-align: center;
     margin: 0px 1rem;
     color: white;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
   }
   &--view {
     right: 0;
@@ -97,7 +129,9 @@
 
   &-img {
     width: 50px;
-    
+    @media (min-width: 768px) {
+      width: 100px;
+    }
   }
   &--move {
     left: 0;
@@ -109,6 +143,9 @@
 }
 .panier-titre {
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .panier-retour {
@@ -118,6 +155,9 @@
   font-size: 0.8rem;
   color: black;
   cursor: pointer;
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .payment {
@@ -144,4 +184,7 @@
 .montant {
   margin-left: 1rem;
   font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }

@@ -96,6 +96,9 @@
   color: black;
   z-index: 2;
   animation: apparition 4s;
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
 }
 
 @keyframes apparition {

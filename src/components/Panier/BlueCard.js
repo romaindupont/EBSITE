@@ -11,13 +11,13 @@ const BlueCard = ({openPayment, numeroCde, ordering, totalAmount, panier, userIn
     CardNumberTest(e.target.value);
   }
   const dateVerifyMonth = (e) => {
-    DateTest(e.target.value)
+    DateTest(e.target.value);
   }
   const dateVerifyYear = (e) => {
-    YearTest(e.target.value)
+    YearTest(e.target.value);
   }
   const verifyCgv = (e) => {
-    CgvTest(e.target.value)
+    CgvTest(e.target.value);
   }
   const paiementConfirmation = (e) => {
     e.preventDefault();
@@ -27,11 +27,20 @@ const BlueCard = ({openPayment, numeroCde, ordering, totalAmount, panier, userIn
       const newOrder = numeroCde + 1;
       let elementId = 0;
       const orderBasket = []
-      panier.forEach(element => { orderBasket.push({'id': elementId=elementId+1, 'article_id': element.id,'quantity':element.quantity,'amount':element.amount});
+      panier.forEach(element => { 
+        orderBasket.push({
+          'id': elementId = elementId+ 1,
+          'article_id': element.id,
+          'quantity': element.quantity,
+          'amount': element.amount
+        });
       });
       const newDate = Date.now();
-      
-      ordering(newOrder, orderBasket, Date.now(),userInfo.id, 'Enregistrée', '10/10/2021', totalAmount)
+      const today = new Date(newDate).toLocaleDateString();
+      let deliveryEstimate = new Date(newDate);
+      deliveryEstimate.setDate(deliveryEstimate.getDate() + 20);
+      const deliveyDate = new Date(deliveryEstimate).toLocaleDateString();
+      ordering(newOrder, orderBasket, today, userInfo.id, 'Enregistrée', deliveyDate, totalAmount);
       let path = `/facture/${newOrder}`; 
       history.push(path);
     }

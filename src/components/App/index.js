@@ -16,6 +16,7 @@ import MonCompte from '../MonCompte';
 import PasswordModification from '../../containers/MonCompte/PasswordModification';
 import InformationsChange from '../../containers/MonCompte/InformationsChange';
 import Facture from '../../containers/Facture';
+import ListFacture from '../../containers/ListFacture';
 
 const App = ({isConnected}) => {
   const [open, setOpen] = useState(false)
@@ -66,7 +67,10 @@ const App = ({isConnected}) => {
               {!isConnected ? <Redirect to="/connexion" /> : <Facture />}
               <Footer />
           </Route>
-        
+          <Route path="/mesCommandes">
+              {!isConnected ? <Redirect to="/connexion" /> : <ListFacture />}
+              <Footer />
+          </Route>
       </Switch>
     </>
     

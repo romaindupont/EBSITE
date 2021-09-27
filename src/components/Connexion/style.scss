@@ -11,6 +11,9 @@
     text-align: center;
     font-family: "Bungee", cursive;
     font-size: 0.9rem;
+    @media (min-width: 768px) {
+      font-size: 1.7rem;
+    }
   }
 
   &-input {
@@ -29,10 +32,16 @@
   font-size: 0.8rem;
   text-align: center;
   margin-bottom: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+  }
 }
 .form-connexion-input--email{
   font-size: 1rem;
   border-radius: 5px;
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+  }
 }
 .form-connexion-label--password {
   color: rgb(228, 222, 222);
@@ -42,10 +51,16 @@
   font-size: 0.8rem;
   text-align: center;
   margin-bottom: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+  }
 }
 .form-connexion-input--password{
   font-size: 1rem;
   border-radius: 5px;
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+  }
 }
 
 .form-connexion-button {
@@ -57,21 +72,34 @@
   padding: 0.2rem;
   font-family: "Bungee", cursive;
   margin-bottom: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 .form-connexion-register {
   display: flex;
   justify-content: center;
   color: #bbdfc8;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .image-passwordVisibility-connexion {
   width: 75%;
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 }
 .passwordVisibility-connexion {
   position: absolute;
   top: 107px;
   right: 65px;
+  @media (min-width: 768px) {
+    top: 197px;
+    right: 180px;
+  }
 }
 .passwordVisibility-connexion:hover > .tooltip {
   visibility: visible;

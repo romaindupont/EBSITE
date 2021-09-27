@@ -16,3 +16,9 @@ export const ordering = (orderNumber, orderList, date, user_id, infoCde, dateLiv
   dateLivraison,
   totalAmount
 });
+
+export const ORDER_NUMBER_SELECT = 'ORDER_NUMBER_SELECT';
+export const orderNumberSelect = (orderNumber) => ({
+  type: ORDER_NUMBER_SELECT,
+  orderNumber
+});
