@@ -4,7 +4,8 @@ import Facture from '../../components/Facture';
 
 const mapStateToProps = (state) => ({
   orderList: state.order.orderList,
-  numeroCde: state.order.numeroCde
+  numeroCde: state.order.numeroCde,
+  articlesList: state.articles.articlesList
  });
 
 const mapDispatchToProps = {}
