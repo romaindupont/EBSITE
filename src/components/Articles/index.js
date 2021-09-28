@@ -22,11 +22,12 @@ const Articles = ({count, open, setCount,articleData,changeArticlesField,listArt
   const currentCate = articleData.find((article) => article.category.toLowerCase() === slug);
   return (
     <div className={classNames("articles", {"articles--open":open})}>
-
-      <SearchBar name="articlesSearch" changeField={changeArticlesField}/>
-      <div className="articles-back">
-        <img onClick={routeChange} src={BackArrow} alt=""/>
-      </div>      
+      <div className="articles-header">
+        <SearchBar name="articlesSearch" changeField={changeArticlesField}/>
+        <div className="articles-back">
+          <img onClick={routeChange} src={BackArrow} alt=""/>
+        </div> 
+      </div>    
       <div className="section">
       {slug==="all" ? (list.map((article)=>
         <Card key={article.id} count={count} setCount={setCount} {...article} sendArticleToBasket={sendArticleToBasket}/>)):(

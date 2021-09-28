@@ -5,7 +5,6 @@ import './style.scss';
 
 const SearchBar = ({changeField, categoryName, name}) => {
   const [openSearch, setOpenSearch] = useState(false);
-
   const clickOnSearch = () => {
     setOpenSearch(!openSearch);
     

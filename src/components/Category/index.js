@@ -8,8 +8,10 @@ import './style.scss';
 const Category = ({open,DataCategory,changeCategoryField, list, userInfo}) => {
   return (
     <div className={classNames("category", {"category--open":open})}>
-      <SearchBar name="categoryName" changeField={changeCategoryField}/>
-      <h2 className="category-title">All Category</h2>
+      <div className="category-header">
+        <SearchBar name="categoryName" changeField={changeCategoryField}/>
+        <h2 className="category-title">All Category</h2>
+      </div>
       <div className="category-section">
       {list.length === 0 ? (
         DataCategory.map((categorie) => 

@@ -140,6 +140,7 @@
 }
 .panier {
   height: 85vh;
+  
 }
 .panier-titre {
   text-align: center;
@@ -162,7 +163,7 @@
 
 .payment {
   background: rgb(43, 41, 41);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100vw;
   height: 5vh;
@@ -187,4 +188,8 @@
   @media (min-width: 768px) {
     font-size: 2rem;
   }
+}
+
+.panier-header {
+  margin-top: 20%;
 }

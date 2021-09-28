@@ -5,13 +5,14 @@ a {
   background: #EFFCF6;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 .accueil {
   font-family: 'Roboto', sans-serif;
   width: 100vw;
   height: 100vh;
   background: #EFFCF6;
-
+  margin-top: 15%;
   &-logo {
     width: 30%;
   }
@@ -45,19 +46,28 @@ a {
 }
 .accueil-title {
   margin: 0 1.3rem;
+  @media (min-width: 768px) {
+    margin: 2.5rem 1.3rem;
+  }
 &-title {
   font-family: "Chango", cursive;
   line-height: 3rem;
   font-size: 1.8rem;
   /* letter-spacing: 0.1rem; */
   margin-right: 3rem;
-
+  @media (min-width: 768px) {
+    font-size: 2.2rem;
+    text-align: center;
+  }
 }
 &-paragraph {
   font-size: 1.3rem;
   display: inline-block;
   line-height: 2rem;
   word-spacing: 0.2rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 }
 .accueil-button {
@@ -69,6 +79,10 @@ a {
   border-radius: 60px;
   font-size: 1rem;
   color: #fff;
+  @media (min-width: 768px) {
+    width: 90%;
+    font-size: 1.5rem;
+  }
   &--click {
     color: #fff;
   }

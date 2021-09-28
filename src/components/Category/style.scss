@@ -1,7 +1,9 @@
 .category {
   background: #EFFCF6;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
+  margin-top: 15%;
+  overflow-x: hidden;
   &--open {
     display: none;
   }
@@ -13,14 +15,16 @@
   flex-wrap: wrap;
   width: 100%;
   background: #EFFCF6;
+  overflow-x: scroll;
+  height: 70vh;
   }
 
 .category-type{
   cursor: pointer;
   width: 45%;
-  margin: 30px 0.5rem;
+  margin: 15px 0.5rem;
   @media (min-width: 768px) {
-    margin: 30px 1rem;
+    margin: 15px 1rem;
   }
   &-image {
     width: 100%;
@@ -51,4 +55,8 @@
   font-family: 'Roboto', sans-serif;
   text-align: center;
   
+}
+
+.category-header {
+  height: 10vh;
 }
