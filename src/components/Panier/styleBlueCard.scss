@@ -154,7 +154,12 @@
   left: 10px;
   transform: rotate(135deg);
   z-index: 5;
-
+  @media (min-width: 768px) {
+    border-bottom: 60px solid rgb(228, 222, 222);
+    border-left: 60px solid transparent;
+    top: 170px;
+    left: 20px;
+  }
 
   &-inside {
     height: 5px;
@@ -166,6 +171,12 @@
     left: 11px;
     transform: rotate(135deg);
     z-index: 5;
+    @media (min-width: 768px) {
+      border-bottom: 50px solid #000;
+      border-left: 50px solid transparent;
+      top: 174px;
+      left: 22px;
+    }
   }
 }
 
@@ -176,6 +187,10 @@
   right: 10px;
   width: 80px;
   height: 60px;
+  @media (min-width: 768px) {
+    width: 100px;
+    height: 80px;
+  }
 }
 
 .imageCb {
@@ -185,6 +200,10 @@
   right: 18px;
   width: 60px;
   height: 40px;
+  @media (min-width: 768px) {
+    width: 80px;
+    height: 60px;
+  }
 }
 
 .cardNumber-input {
@@ -197,6 +216,11 @@
   background: black;
   color: #e4dede;
   border: none;
+  @media (min-width: 768px) {
+    bottom: 135px;
+    left: 45px;
+    font-size: 2rem;
+  }
 }
 
 .cardDate-input--month {
@@ -210,6 +234,10 @@
   color: rgb(228, 222, 222);
   border: none;
   width: 50px;
+  @media (min-width: 768px) {
+    left: 345px;
+    font-size: 1.5rem;
+  }
 }
 .cardDate-input--span {
   position: absolute;
@@ -222,6 +250,10 @@
   color: rgb(228, 222, 222);
   border: none;
   width: 15px;
+  @media (min-width: 768px) {
+    left: 410px;
+    font-size: 1.5rem;
+  }
 }
 .cardDate-input--year {
   position: absolute;
@@ -234,6 +266,10 @@
   color: rgb(228, 222, 222);
   border: none;
   width: 50px;
+  @media (min-width: 768px) {
+    left: 435px;
+    font-size: 1.5rem;
+  }
 }
 
 .text-cardDate {
@@ -243,6 +279,11 @@
   font-size: 0.8rem;
   position: absolute;
   left: 85px;
+  @media (min-width: 768px) {
+    bottom: 82px;
+    font-size: 1.5rem;
+    left: 235px;
+  }
 }
 
 .inputName--surname {
@@ -254,6 +295,11 @@
   background: black;
   color: #e4dede;
   border: none;
+  @media (min-width: 768px) {
+    left: 325px;
+    width: 150px;
+    font-size: 1.5rem;
+  }
 }
 
 .inputName--name {
@@ -265,6 +311,11 @@
   background: black;
   color: #e4dede;
   border: none;
+  @media (min-width: 768px) {
+    left: 485px;
+    width: 150px;
+    font-size: 1.5rem;
+  }
 }
 
 .optionCivil {
@@ -276,6 +327,11 @@
   background: black;
   color: #e4dede;
   border: none;
+  @media (min-width: 768px) {
+    left: 205px;
+    font-size: 1.5rem;
+    width: 100px;
+  }
 }
 
 .blueCard-back--rectangle {
@@ -290,6 +346,11 @@
   top: 100px;
   left: 150px;
   font-family: "Bungee", cursive;
+  @media (min-width: 768px) {
+    left: 390px;
+    font-size: 1.5rem;
+    top: 130px;
+  }
 }
 .blueCard-back--cgv {
   position: absolute;
@@ -299,6 +360,11 @@
   width: 50px;
   font-family: "Bungee", cursive;
   color: #000;
+  @media (min-width: 768px) {
+    left: 475px;
+    font-size: 1.5rem;
+    top: 130px;
+  }
 }
 
 .paiement-button {
@@ -310,5 +376,8 @@
     padding: 0.4rem;
     border-radius: 5px;
     background: #bbdfc8;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 }

@@ -4,8 +4,9 @@ import Field from '../../containers/Register/Field';
 import { passwordAutorisation } from '../../utils/passwordAutorisation';
 import ShowPassword from '../../assets/img/show-password.png';
 import { PasswordVisibility } from '../../utils/passwordVisibility';
+import classNames from 'classnames';
 
-const PasswordModification = ({ changeUserPassword }) => {
+const PasswordModification = ({ changeUserPassword, open }) => {
   const visibility = () => {
     PasswordVisibility()
   }
@@ -27,7 +28,7 @@ const PasswordModification = ({ changeUserPassword }) => {
     }
   }
   return (
-    <form className="monCompte" type="submit">
+    <form className={classNames("monCompte", {"monCompte--openMenu":open})} type="submit">
       <h2>Mon Nouveau Mot de passe</h2>
       <label className="register-label">Nouveau Mot de passe
         <Field 

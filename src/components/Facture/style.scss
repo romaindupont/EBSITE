@@ -1,7 +1,17 @@
 .panier > p {
   margin-left: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
-
+.panier > ul {
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
 .panier > ul > li {
   margin-left: 3rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }

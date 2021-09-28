@@ -24,7 +24,9 @@ a {
     text-align: center;
     background: #EFFCF6;
     border-radius: 40%;
-
+    @media (min-width: 992px) {
+      width: 80%;
+    }
     &-image {
       width: 80%;
     }

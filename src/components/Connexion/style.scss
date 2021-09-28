@@ -1,10 +1,10 @@
 .form-connexion {
-  display: none;
+  display: block;
   width: 90vw;
   margin: auto;
   height: 255px;
-  &--open {
-    display: block;
+  &--openMenu {
+    display: none;
   }
   &-title {
     color: rgb(228, 222, 222);
@@ -74,6 +74,7 @@
   margin-bottom: 1rem;
   @media (min-width: 768px) {
     font-size: 1.5rem;
+    margin-top: 1rem;
   }
 }
 

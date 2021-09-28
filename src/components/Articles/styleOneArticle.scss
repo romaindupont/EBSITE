@@ -1,8 +1,20 @@
 .articles-back {
   margin-left: 1rem;
 }
+
+.articles-back > img {
+  @media (min-width: 768px) {
+    width: 5%;
+  }
+}
 .articles-detail {
   background: #EFFCF6;
+  margin-top: 20%;
+  overflow-x: auto;
+  display: block;
+  &--openMenu {
+    display: none;
+  }
 }
 .articles-detail-image {
   display: flex;
@@ -140,11 +152,11 @@
 
 .articles-detail-infos {
   font-family: "Roboto", sans-serif;
-  overflow: auto;
+  overflow-x: auto;
   width: 90%;
   margin-left: 1rem;
   margin-right: 1rem;
-  height: 80vh;
+  height: 30vh;
 
   &-title {
     font-family: "Chango", cursive;

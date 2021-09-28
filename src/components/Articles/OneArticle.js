@@ -4,8 +4,9 @@ import BackArrow from '../../assets/img/back-arrow.svg';
 import { useHistory, useParams } from 'react-router-dom';
 import './styleOneArticle.scss';
 import articleData from '../../data/articleData';
+import classNames from 'classnames';
 
-const OneArticle = ({sendArticleToBasket}) => {
+const OneArticle = ({sendArticleToBasket, open}) => {
   const [quantity, setQuantity] = useState(1);
   const { id } = useParams();
   const currentObject = articleData.find((article) => article.id == id);
@@ -49,7 +50,7 @@ const OneArticle = ({sendArticleToBasket}) => {
   
   return (
     <>
-    <form type="submit" className="articles-detail">
+    <form type="submit" className={classNames("articles-detail", {"articles-detail--openMenu":open})}>
       <div className="articles-back">
         <img onClick={routeChange} src={BackArrow} alt=""/>
       </div>

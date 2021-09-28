@@ -28,46 +28,46 @@ const App = ({isConnected}) => {
         </Route>
         <Route exact path="/categories">
           <Category open={open}/>
-          <Footer />
+          <Footer open={open}/>
         </Route>
         <Route exact path="/categories/:slug">
           <Articles open={open}/>
-          <Footer />
+          <Footer open={open}/>
         </Route>
         <Route path="/categories/articles/:id">
           <OneArticle open={open}/>
-          <Footer />
+          <Footer open={open}/>
         </Route>
         <Route path="/panier">
-          <Panier />
+          <Panier open={open}/>
         </Route>
         <Route path="/connexion">
-          <Connexion openPayment={true}/>
-          <Footer />
+          <Connexion open={open}/>
+          <Footer open={open}/>
         </Route>
         <Route path="/register">
-          <Register />
-          <Footer />
+          <Register open={open}/>
+          <Footer open={open}/>
         </Route>
         <Route path="/moncompte">
           {!isConnected ? <Redirect to="/connexion" /> : <MonCompte />}
-          <Footer />
+          <Footer open={open}/>
         </Route>
         <Route path="/passwordChange">
-          {!isConnected ? <Redirect to="/connexion" /> : <PasswordModification />}
-          <Footer />
+          {!isConnected ? <Redirect to="/connexion" /> : <PasswordModification open={open}/>}
+          <Footer open={open}/>
         </Route>
         <Route path="/informations">
           {!isConnected ? <Redirect to="/connexion" /> : <InformationsChange />}
-          <Footer />
+          <Footer open={open}/>
         </Route>
         <Route path="/facture/:id">
           {!isConnected ? <Redirect to="/connexion" /> : <Facture />}
-          <Footer />
+          <Footer open={open}/>
         </Route>
         <Route path="/mesCommandes">
           {!isConnected ? <Redirect to="/connexion" /> : <ListFacture />}
-          <Footer />
+          <Footer open={open}/>
         </Route>
       </Switch>
     </>

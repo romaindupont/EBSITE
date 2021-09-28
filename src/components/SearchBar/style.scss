@@ -28,6 +28,9 @@
         top: 60px;
         transition:right 2s;
         border-bottom: 1px solid #55efc4;
+        @media (min-width: 768px) {
+          font-size: 2rem;
+        }
       }
     }
   }

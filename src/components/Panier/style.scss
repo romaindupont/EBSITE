@@ -140,7 +140,11 @@
 }
 .panier {
   height: 85vh;
-  
+  margin-top: 20%;
+  display: block;
+  &--openMenu {
+    display: none;
+  }
 }
 .panier-titre {
   text-align: center;
@@ -170,7 +174,7 @@
   border-radius: 10px 10px 0px 0px;
   transition: all 500ms;
   &--open {
-    height: 50vh;
+    height: 55vh;
   }
 }
 
@@ -192,4 +196,9 @@
 
 .panier-header {
   margin-top: 20%;
+}
+
+.container-panier {
+  overflow-x: scroll;
+  height: 70vh;
 }

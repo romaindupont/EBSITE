@@ -5,11 +5,11 @@ import classNames from 'classnames';
 import ShowPassword from '../../assets/img/show-password.png';
 import { PasswordVisibility } from '../../utils/passwordVisibility';
 
-const Connexion = ({openPayment, changeValue, login, userList}) => {
+const Connexion = ({changeValue, login, userList, open}) => {
   let history = useHistory();
   let error = document.getElementById('error');
   const visibility = () => {
-    PasswordVisibility()
+    PasswordVisibility();
   }
   const changeIt = (e) => {
     changeValue(e.target.changeValue, e.target.name);
@@ -17,7 +17,7 @@ const Connexion = ({openPayment, changeValue, login, userList}) => {
   const connect = (e) => {
     e.preventDefault();
     login(e.target.form.email.value,e.target.form.password.value);
-    const findUser = userList.find((user)=> user.email === e.target.form.email.value & user.password === e.target.form.password.value)
+    const findUser = userList.find((user)=> user.email === e.target.form.email.value & user.password === e.target.form.password.value);
     
     if (findUser === undefined) {
       error.textContent="Les informations saisies sont incorrectes";
@@ -25,12 +25,10 @@ const Connexion = ({openPayment, changeValue, login, userList}) => {
     else {
       let path = `/categories`; 
       history.push(path);
-
     }
-
   }
   return (
-    <form type="submit" className={classNames("form-connexion", {"form-connexion--open":openPayment})}>
+    <form type="submit" className={classNames("form-connexion", {"form-connexion--openMenu":open})}>
       <h3 className="form-connexion-title">Me connecter</h3>
       <div className="form-connexion-input">
       <label className="form-connexion-label--email">Identifiant

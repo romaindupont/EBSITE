@@ -1,16 +1,26 @@
 .monCompte {
   display: flex;
   flex-direction: column;
-
+  margin-top: 20%;
+  &--openMenu {
+    display: none;
+  }
   &-lien {
     display: flex;
     flex-direction: column;
     margin: auto;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
   }
   &-link {
     color: #000;
     
   }
+}
+ul {
+  overflow-x: auto;
+  height: 60vh;
 }
 
 li {
@@ -19,6 +29,9 @@ li {
 
 .monCompte > h2 {
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 #error {
@@ -29,11 +42,17 @@ li {
 
 .image-passwordVisibility {
   width: 75%;
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 }
 .passwordVisibility {
   position: absolute;
   top: 192px;
   right: 38px;
+  @media (min-width: 768px) {
+    top: 288px;
+  }
 }
 .passwordVisibility:hover > .tooltip {
   visibility: visible;
