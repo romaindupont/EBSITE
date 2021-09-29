@@ -16,6 +16,7 @@
   margin: 40px auto;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  
 }
 
 .blueCard-face {
@@ -27,7 +28,7 @@
   box-shadow: 0 1px grey, 2px 0 grey, 1px 2px grey, 2px 1px grey, 2px 3px grey, 3px 2px grey, 3px 4px grey, 4px 3px grey, -3px 5px grey, 5px -2px grey, 5px 6px grey, 6px 5px grey;
   @media (min-width: 1200px) {
     margin: 20px auto;
-    height: 40vh;
+    height: 45vh;
   }
 }
 
@@ -40,7 +41,7 @@
   position: absolute;
   @media (min-width: 1200px) {
     margin: 20px auto;
-    height: 40vh;
+    height: 45vh;
   }
 
   &--turn {
@@ -56,6 +57,10 @@
   position: absolute;
   top: 25px;
   left: 10px;
+  @media (min-width: 1200px) {
+    width: 80px;
+    height: 50px;
+  }
 }
 
 
@@ -66,12 +71,20 @@
     position: absolute;
     top: 6px;
     width: 15px;
+    @media (min-width: 1200px) {
+    top: 15px;
+    width: 25px;
+    }
   }
   &-line2 {
     border: 1px solid black;
     position: absolute;
     top: 15px;
     width: 15px;
+    @media (min-width: 1200px) {
+      top: 28px;
+      width: 25px;
+    }
   }
   &-line3 {
     border: 1px solid black;
@@ -79,6 +92,10 @@
     top: 6px;
     right: 0;
     width: 15px;
+    @media (min-width: 1200px) {
+      top: 15px;
+      width: 27px;
+    }
   }
   &-line4 {
     border: 1px solid black;
@@ -86,6 +103,10 @@
     top: 15px;
     right: 0;
     width: 15px;
+    @media (min-width: 1200px) {
+      top: 28px;
+      width: 27px;
+    }
   }
   &-demiRond1 {
     background: transparent;
@@ -96,6 +117,12 @@
     position: absolute;
     top: 2px;
     left: 15px;
+    @media (min-width: 1200px) {
+      width: 25px;
+      height: 25px;
+      top: 10px;
+      left: 25px;
+    }
   }
   &-demiRond2 {
     
@@ -107,6 +134,9 @@
     width: 50px;
     height: 25px;
     background: transparent;
+    @media (min-width: 1200px) {
+      left: 65px;
+    }
   }
 }
 /* .point {
@@ -127,6 +157,11 @@
   left: 8px;
   top: 4px;
   border-radius: 50%;
+  @media (min-width: 1200px) {
+   width: 25px;
+   height: 30px;
+
+  }
 }
 
 .arcCercle--2 {
@@ -138,6 +173,10 @@
   left: 15px;
   top: 2px;
   border-radius: 50%;
+  @media (min-width: 1200px) {
+    width: 30px;
+    height: 35px;
+  }
 }
 
 .arcCercle--3 {
@@ -149,6 +188,10 @@
   left: 24px;
   top: 0px;
   border-radius: 50%;
+  @media (min-width: 1200px) {
+    width: 35px;
+    height: 40px;
+  }
 }
 
 .triangle {
@@ -254,6 +297,9 @@
     left: 100px;
     font-size: 2.5rem;
   }
+  @media (min-width: 1200px) {
+    left: 230px;
+  }
 }
 
 .cardDate-input--month {
@@ -276,6 +322,9 @@
     font-size: 2rem;
     bottom: 131px;
   }
+  @media (min-width: 1200px) {
+    left: 535px;
+  }
 }
 .cardDate-input--span {
   position: absolute;
@@ -296,6 +345,9 @@
     left: 496px;
     font-size: 2rem;
     bottom: 132px;
+  }
+  @media (min-width: 1200px) {
+    left: 600px;
   }
 }
 .cardDate-input--year {
@@ -318,6 +370,9 @@
     font-size: 2rem;
     bottom: 132px;
   }
+  @media (min-width: 1200px) {
+    left: 625px;
+  }
 }
 
 .text-cardDate {
@@ -336,6 +391,9 @@
     bottom: 155px;
     font-size: 2rem;
     left: 300px;
+  }
+  @media (min-width: 1200px) {
+    left: 420px; 
   }
 }
 
@@ -358,6 +416,9 @@
     font-size: 2rem;
     bottom: 50px;
   }
+  @media (min-width: 1200px) {
+   left: 470px;
+  }
 }
 
 .inputName--name {
@@ -379,6 +440,9 @@
    font-size: 2rem;
    bottom: 50px; 
   }
+  @media (min-width: 1200px) {
+    left: 678px;
+  }
 }
 
 .optionCivil {
@@ -398,6 +462,9 @@
   @media (min-width: 992px) {
     font-size: 2rem;
     bottom: 50px;
+  }
+  @media (min-width: 1200px) {
+    left: 330px; 
   }
 }
 
@@ -464,7 +531,7 @@
       font-size: 2rem;
     }
     @media (min-width: 1200px) {
-      margin: 145px auto;
+      margin: 190px auto;
     }
   }
 }

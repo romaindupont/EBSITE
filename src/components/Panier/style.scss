@@ -137,12 +137,18 @@
     @media (min-width: 992px) {
       left: -10%;
     }
+    @media (min-width: 1800px) {
+      left: -5%;
+    }
   }
 }
 .panier {
   height: 85vh;
   margin-top: 20%;
   display: block;
+  @media (min-width: 1800px) {
+    margin-top: 10%;
+  }
   &--openMenu {
     display: none;
   }
@@ -161,12 +167,14 @@
   font-size: 0.8rem;
   color: black;
   cursor: pointer;
+  z-index: 10;
   @media (min-width: 768px) {
     font-size: 1.4rem;
   }
   @media (min-width: 992px) {
     font-size: 2rem;
   }
+
 }
 
 .payment {
@@ -191,6 +199,10 @@
   width: 20%;
   margin: 5px auto;
   border-radius: 10px;
+  cursor: pointer;
+  @media (min-width: 1200px) {
+    border: 10px solid white;
+  }
 }
 
 .montant {
@@ -203,9 +215,19 @@
 
 .panier-header {
   margin-top: 20%;
+  @media (min-width: 1800px) {
+    margin-top: 12%;
+  }
 }
 
 .container-panier {
-  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 70vh;
+  @media (min-width: 1200px) {
+    height: 50vh;
+  }
+  @media (min-width: 1800px) {
+    height: 55vh;
+  }
 }

@@ -55,6 +55,9 @@
     background: #bbdfc8;
     border-radius: 50%;
     padding: .3rem;
+    @media (min-width: 1800px) {
+      width: 3%;
+    }
   }
 }
 .articles {

@@ -15,7 +15,7 @@ import PasswordModification from '../../containers/MonCompte/PasswordModificatio
 import InformationsChange from '../../containers/MonCompte/InformationsChange';
 import Facture from '../../containers/Facture';
 import ListFacture from '../../containers/ListFacture';
-import Header from '../Header';
+import Header from '../../containers/Header';
 
 const App = ({isConnected}) => {
   const [open, setOpen] = useState(false)

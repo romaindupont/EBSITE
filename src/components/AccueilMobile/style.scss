@@ -13,8 +13,14 @@ a {
   height: 100vh;
   background: #EFFCF6;
   margin-top: 15%;
+  @media (min-width: 1800px) {
+    margin-top: 10%;
+  }
   &-logo {
     width: 30%;
+    @media (min-width: 1800px) {
+      width: 20%;
+    }
   }
 
   &-carrousel {
@@ -29,6 +35,9 @@ a {
     }
     @media (min-width: 1200px) {
       width: 50%;
+    }
+    @media (min-width: 1800px) {
+      width: 40%;
     }
     &-image {
       width: 80%;

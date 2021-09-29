@@ -58,7 +58,8 @@ const OneArticle = ({sendArticleToBasket, open}) => {
       <div className="articles-detail-circle"></div>
         <img className="articles-detail-image--img" src={currentObject.picture} alt=""/>
         <img className="articles-detail-image--img--1" src={currentObject.picture1} alt=""/>
-        <p className="articles-detail-image--img--2">Dimension : {currentObject.dimension}</p>
+        <img className="articles-detail-image--img--2" src={currentObject.picture2} alt=""/>
+        {/* <p className="articles-detail-image--img--2">Dimension : {currentObject.dimension}</p> */}
       </div>
       <div className="articles-detail-photos">
         <span onClick={redClick} className="articles-detail-photos-1"></span>
@@ -76,6 +77,8 @@ const OneArticle = ({sendArticleToBasket, open}) => {
         </div>
         <h4 className="articles-detail-infos-title-desc">Description</h4>
         <p className="articles-detail-infos-small">{currentObject.descriptionPlus}</p>
+        <h4 className="articles-detail-infos-title-desc">Dimension</h4>
+        <p className="articles-detail-infos-small">{currentObject.dimension}</p>
         <div className="articles-detail-infos-panier">
         <p className="articles-detail-infos-panier--button" onClick={clickPanier}>Ajouter au panier</p>
         <p className="articles-detail-infos-panier--price">{currentObject.prix.toFixed(2)}€</p>

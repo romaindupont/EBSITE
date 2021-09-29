@@ -19,8 +19,11 @@
   }
 }
 ul {
-  overflow-x: auto;
+  overflow-x: hidden;
   height: 60vh;
+  @media (min-width: 1200px) {
+    height: 50vh;
+  }
 }
 
 li {

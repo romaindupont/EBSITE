@@ -14,7 +14,8 @@
   }
 }
 .register-div {
-  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .register-label {
   display: flex;
