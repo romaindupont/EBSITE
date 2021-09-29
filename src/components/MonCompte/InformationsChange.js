@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 import Field from '../../containers/MonCompte/Field';
+import { Link } from 'react-router-dom';
 
 const InformationsChange = ({userInfo, changeUserInfos}) => {
   const validationData = (e) => {
@@ -38,6 +39,7 @@ const InformationsChange = ({userInfo, changeUserInfos}) => {
   return (
     <form className="register" type="submit">
     <div className="register-div">
+    <Link to='/moncompte' className="panier-retour">Revenir dans mon compte</Link>
       <h2 className="register-title">Mes informations</h2>
       <label className="register-label">email
         <Field 

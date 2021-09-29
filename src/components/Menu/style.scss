@@ -8,21 +8,30 @@
   flex-wrap: wrap;
   cursor: pointer;
   z-index: 100;
-
+  @media (min-width: 992px) {
+    width: 50px;
+    height: 50px;
+  }
   &-point-1 {
     height: 5px;
     width: 5px;
     background: #000;
     border-radius: 50%;
     margin-right: 5px;
-
+    @media (min-width: 992px) {
+      height: 20px;
+      width: 20px;
+    }
   }
   &-point-2 {
     height: 5px;
     width: 5px;
     background: #000;
     border-radius: 50%;
-
+    @media (min-width: 992px) {
+      height: 20px;
+      width: 20px;
+    }
   }
   &-point-3 {
     height: 5px;
@@ -30,14 +39,20 @@
     background: #000;
     border-radius: 50%;
     margin-right: 5px;
-
+    @media (min-width: 992px) {
+      height: 20px;
+      width: 20px;
+    }
   }
   &-point-4 {
     height: 5px;
     width: 5px;
     background: #000;
     border-radius: 50%;
- 
+    @media (min-width: 992px) {
+      height: 20px;
+      width: 20px;
+    }
   }
 }
 
@@ -46,12 +61,19 @@
   border-radius: 0;
   margin-right: 0;
   transform: (rotate(-45deg) translate(-9px,5px));
+  @media (min-width: 992px) {
+    width: 50px;
+  }
 }
 .menu-point-4--open {
   width: 20px;
   border-radius: 0;
   margin-right: 0;
   transform: (rotate(45deg) translate(-2px,2px));
+  @media (min-width: 992px) {
+    width: 50px;
+    transform: (rotate(45deg) translate(-14px,-8px));
+  }
 }
 .menu-point-2--open, .menu-point-3--open{
   display: none;
@@ -98,6 +120,13 @@
   animation: apparition 4s;
   @media (min-width: 768px) {
     font-size: 4rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 6rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 5rem;
+    width: 100%;
   }
 }
 

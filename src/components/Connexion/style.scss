@@ -101,6 +101,12 @@
     top: 197px;
     right: 180px;
   }
+  @media (min-width: 992px) {
+    right: 295px;
+  }
+  @media (min-width: 1200px) {
+    right: 414px;
+  }
 }
 .passwordVisibility-connexion:hover > .tooltip {
   visibility: visible;

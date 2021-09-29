@@ -53,6 +53,10 @@ li {
   @media (min-width: 768px) {
     top: 288px;
   }
+  @media (min-width: 992px) {
+    top: 360px;
+    right: 110px;
+  }
 }
 .passwordVisibility:hover > .tooltip {
   visibility: visible;

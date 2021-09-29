@@ -7,6 +7,15 @@
     position: absolute;
     top: 60px;
     right: 65px;
+    @media (min-width: 992px) {
+     width: 5%;
+     top: 80px;
+    }
+    @media (min-width: 1200px) {
+       width: 4%;
+       top: 155px;
+       right: 600px;   
+    }
     &--open {
       display: none;
     }
@@ -31,6 +40,9 @@
         @media (min-width: 768px) {
           font-size: 2rem;
         }
+        @media (min-width: 1200px) {
+          margin: 5rem 22rem;
+        }
       }
     }
   }
@@ -49,6 +61,14 @@
   right: 65px;
   display: none;
   cursor: pointer;
+  @media (min-width: 992px) {
+    top: 80px;
+   }
+   @media (min-width: 1200px) {
+      top: 155px;
+      width: 30px;
+      right: 390px;    
+  }
 }
 .searchBar-menu-barre-1--open, .searchBar-menu-barre-3--open {
   display: block;

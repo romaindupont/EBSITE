@@ -17,6 +17,9 @@
   background: #EFFCF6;
   overflow-x: scroll;
   height: 70vh;
+  @media (min-width: 1024px) {
+    overflow-x: hidden;
+  }
   }
 
 .category-type{
@@ -26,9 +29,15 @@
   @media (min-width: 768px) {
     margin: 15px 1rem;
   }
+  @media (min-width: 1200px) {
+    margin: 40px 3rem;
+    width: 25%;
+  }
   &-image {
     width: 100%;
-    
+    @media (min-width: 1200px) {
+      width: 80%;
+    }
   }
   &-titre {
     font-family: 'Roboto', sans-serif;
@@ -45,10 +54,12 @@
 
 .category-type-round{
   background: #bbdfc8;
-/*   height: 100%;
-  width: 100%; */
-/*   border-radius: 50%; */
   box-shadow: 10px -10px #75cfb8;
+  @media (min-width: 1200px) {
+    height: 150px;
+    width: 300px;
+    text-align: center;
+  }
 }
 .category-title {
   font-size: 2rem;

@@ -48,8 +48,7 @@
 }
 
 .panier-container-quantity {
-  /* margin-left: 2rem; */
-  /* margin-right: 2rem; */
+  cursor: pointer;
   @media (min-width: 768px) {
     font-size: 2rem;
   }
@@ -134,8 +133,10 @@
     }
   }
   &--move {
-    left: 0;
     left: -15%;
+    @media (min-width: 992px) {
+      left: -10%;
+    }
   }
 }
 .panier {
@@ -163,6 +164,9 @@
   @media (min-width: 768px) {
     font-size: 1.4rem;
   }
+  @media (min-width: 992px) {
+    font-size: 2rem;
+  }
 }
 
 .payment {
@@ -175,6 +179,9 @@
   transition: all 500ms;
   &--open {
     height: 55vh;
+    @media (min-width: 1200px) {
+      height: 65vh;
+    }
   }
 }
 

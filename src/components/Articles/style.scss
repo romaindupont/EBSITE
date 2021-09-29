@@ -89,6 +89,9 @@
   @media (min-width: 768px) {
     height: 100px;
   }
+  @media (min-width: 1200px) {
+    display: none;
+  }
   &--openMenu {
     display: none;
   }
@@ -97,6 +100,9 @@
 .section {
   overflow-x: scroll;
   height: 75vh;
+  @media (min-width: 1200px) {
+   height: 70vh;
+  }
 }
 
 .counter--count {
