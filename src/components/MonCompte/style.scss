@@ -60,6 +60,10 @@ li {
     top: 360px;
     right: 110px;
   }
+  @media (min-width: 1800px) {
+    top: 540px;
+    right: 385px;
+  }
 }
 .passwordVisibility:hover > .tooltip {
   visibility: visible;
