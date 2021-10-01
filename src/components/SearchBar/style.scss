@@ -16,6 +16,9 @@
       top: 155px;
       right: 600px;   
     }
+    @media (min-width: 1400px) {
+      right: 690px;   
+    }
     @media (min-width: 1800px) {
       width: 3%;
       top: 58px;
@@ -76,6 +79,9 @@
     top: 155px;
     width: 30px;
     right: 390px;    
+  }
+  @media (min-width: 1400px) {
+    right: 430px;    
   }
   @media (min-width: 1800px) {
     top: 58px;

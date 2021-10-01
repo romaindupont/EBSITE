@@ -13,6 +13,9 @@ header {
     right: 160px;
     top: 63px;
  }
+ @media (min-width: 1400px) {
+  top: 68px;
+}
 }
 
 .caddyMenuPc--count {

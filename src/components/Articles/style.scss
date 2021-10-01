@@ -55,6 +55,9 @@
     background: #bbdfc8;
     border-radius: 50%;
     padding: .3rem;
+    @media (min-width: 1400px) {
+      width: 4%;
+    }
     @media (min-width: 1800px) {
       width: 3%;
     }
@@ -63,6 +66,9 @@
 .articles {
   height: 80vh;
   margin-top: 20%;
+  @media (min-width: 1400px) {
+    margin-top: 12%;
+  }
   @media (min-width: 1800px) {
     margin-top: 12%;
   }
@@ -136,6 +142,9 @@ a {
 
 .articles-header {
   margin-top: 20%;
+  @media (min-width: 1400px) {
+    margin-top: 10%;
+  }
   @media (min-width: 1800px) {
     margin-top: 10%;
   }
