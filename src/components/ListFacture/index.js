@@ -5,7 +5,7 @@ const ListFacture = ({orderList, userInfo, orderNumberSelect}) => {
   const ListCommande = orderList.filter((order) => order.user_id === userInfo.id);
   return (
     <>
-    <div className="panier">
+    <div className="panier facture">
       <Link to='/moncompte' className="panier-retour">Revenir dans mon compte</Link>
       <h2 className="panier-titre">Mes Commandes :</h2>
         <ul>

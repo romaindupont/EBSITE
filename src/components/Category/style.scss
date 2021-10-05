@@ -4,6 +4,10 @@
   height: 80vh;
   margin-top: 15%;
   overflow-x: hidden;
+  @media (min-width: 1200px) {
+    margin-top: 5%;
+    height: 90vh;
+  }
   &--open {
     display: none;
   }
@@ -17,8 +21,12 @@
   background: #EFFCF6;
   overflow-x: scroll;
   height: 70vh;
+  margin-top: 0.8rem;
   @media (min-width: 1024px) {
     overflow-x: hidden;
+  }
+  @media (min-width: 1400px) {
+    height: 75vh;
   }
   }
 
@@ -76,4 +84,8 @@
 
 .category-header {
   height: 10vh;
+}
+
+.category-type:hover > .category-type-round {
+  box-shadow: 10px -10px #18af85;
 }

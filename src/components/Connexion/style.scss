@@ -72,12 +72,15 @@
   padding: 0.2rem;
   font-family: "Bungee", cursive;
   margin-bottom: 1rem;
+  cursor: pointer;
   @media (min-width: 768px) {
     font-size: 1.5rem;
     margin-top: 1rem;
   }
 }
-
+.form-connexion-button:hover {
+  background: #18af85;
+}
 .form-connexion-register {
   display: flex;
   justify-content: center;
@@ -86,7 +89,9 @@
     font-size: 2rem;
   }
 }
-
+.form-connexion-register:hover {
+  color: #18af85;
+}
 .image-passwordVisibility-connexion {
   width: 75%;
   @media (min-width: 768px) {
@@ -108,7 +113,7 @@
     right: 414px;
   }
   @media (min-width: 1400px) {
-    right: 485px;
+    right: 526px;
   }
   @media (min-width: 1800px) {
     right: 700px;

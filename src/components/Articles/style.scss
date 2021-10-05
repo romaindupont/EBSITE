@@ -63,11 +63,15 @@
     }
   }
 }
+.articles-section-infos-addCart:hover {
+  background: #18af85;
+}
+
 .articles {
   height: 80vh;
   margin-top: 20%;
   @media (min-width: 1400px) {
-    margin-top: 12%;
+    margin-top: 5%;
   }
   @media (min-width: 1800px) {
     margin-top: 12%;
@@ -81,6 +85,9 @@
   width: 30px;
   @media (min-width: 768px) {
     width: 50px;
+  }
+  @media (min-width: 1200px) {
+    width: 35px;
   }
 }
 .caddy {
@@ -148,4 +155,8 @@ a {
   @media (min-width: 1800px) {
     margin-top: 10%;
   }
+}
+
+.articles-section-image:hover {
+  background: #18af85;
 }

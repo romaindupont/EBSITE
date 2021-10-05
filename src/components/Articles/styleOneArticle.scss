@@ -17,7 +17,7 @@
   overflow-x: auto;
   display: block;
   @media (min-width: 1400px) {
-    margin-top: 12%;
+    margin-top: 8%;
   }
   @media (min-width: 1800px) {
     margin-top: 10%;
@@ -48,8 +48,8 @@
       height: 40rem;
     }
     @media (min-width: 1200px) {
-      width: 20rem;
-      height: 20rem;
+      width: 15rem;
+      height: 15rem;
     }
   }
 .articles-detail-image--img {
@@ -59,7 +59,7 @@
     width: 40%;
   }
   @media (min-width: 1400px) {
-    width: 30%;
+    width: 20%;
   }
   @media (min-width: 1800px) {
     width: 25%;
@@ -72,7 +72,7 @@
       width: 40%;
      }
      @media (min-width: 1400px) {
-      width: 30%;
+      width: 20%;
     }
      @media (min-width: 1800px) {
       width: 25%;
@@ -86,13 +86,14 @@
       width: 40%;
     }
     @media (min-width: 1400px) {
-      width: 30%;
+      width: 20%;
     }
     @media (min-width: 1800px) {
       width: 25%;
     }
   }
 }
+
 .articles-detail-photos {
   margin: -15px auto;
   position: relative;
@@ -121,6 +122,8 @@
   }
   @media (min-width: 1400px) {
     top: -10px;
+    width: 230px;
+    height: 90px;
   }
 
 &-1 {
@@ -129,6 +132,10 @@
   background: #ff3f34;
   border-radius: 50%;
   margin: auto;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
   @media (min-width: 768px) {
     width: 40px;
     height: 40px;
@@ -141,6 +148,10 @@
   background: #0fbcf9;
   border-radius: 50%;
   margin: 50px auto;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
   @media (min-width: 768px) {
     width: 40px;
     height: 40px;
@@ -154,6 +165,10 @@
   border-radius: 50%;
   z-index: 2;
   margin: auto;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
   @media (min-width: 768px) {
     width: 40px;
     height: 40px;
@@ -172,7 +187,7 @@
     height: 20vh;
   }
   @media (min-width: 1400px) {
-    height: 25vh;
+    height: 30vh;
   }
   @media (min-width: 1800px) {
     height: 30vh;
@@ -220,10 +235,14 @@
   background: #75cfb8;
   text-align: center;
   font-size: 2rem;
+  cursor: pointer;
   @media (min-width: 768px) {
     font-size: 3rem;
     width: 60px;
     height: 60px;
+  }
+  &:hover {
+    background: #18af85;
   }
 }
 
@@ -252,6 +271,9 @@
     cursor: pointer;
     @media (min-width: 768px) {
       font-size: 1.5rem;
+    }
+    &:hover {
+      background: #18af85;
     }
   }
 

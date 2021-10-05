@@ -24,3 +24,19 @@
     font-size: 2rem;
   }
 }
+
+.facture {
+  @media (min-width: 1400px) {
+    margin-top: 9%;
+  }
+  
+}
+
+.factureList {
+  @media (min-width: 1400px) {
+    height: 65vh;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    overflow-y: auto;
+  }
+}

@@ -30,6 +30,9 @@
     margin: 20px auto;
     height: 45vh;
   }
+  @media (min-width: 1400px) {
+    height: 60vh;
+  }
 }
 
 .blueCard-back {
@@ -43,7 +46,9 @@
     margin: 20px auto;
     height: 45vh;
   }
-
+  @media (min-width: 1400px) {
+    height: 60vh;
+  }
   &--turn {
     display: block;
   
@@ -75,6 +80,9 @@
     top: 15px;
     width: 25px;
     }
+    @media (min-width: 1400px) {
+      width: 24px;
+    }
   }
   &-line2 {
     border: 1px solid black;
@@ -84,6 +92,9 @@
     @media (min-width: 1200px) {
       top: 28px;
       width: 25px;
+    }
+    @media (min-width: 1400px) {
+      width: 24px;
     }
   }
   &-line3 {
@@ -96,6 +107,9 @@
       top: 15px;
       width: 27px;
     }
+    @media (min-width: 1400px) {
+      width: 26px;
+    }
   }
   &-line4 {
     border: 1px solid black;
@@ -106,6 +120,9 @@
     @media (min-width: 1200px) {
       top: 28px;
       width: 27px;
+    }
+    @media (min-width: 1400px) {
+      width: 26px;
     }
   }
   &-demiRond1 {
@@ -227,6 +244,7 @@
     left: 11px;
     transform: rotate(135deg);
     z-index: 5;
+    cursor: pointer;
     @media (min-width: 768px) {
       border-bottom: 50px solid #000;
       border-left: 50px solid transparent;
@@ -240,6 +258,9 @@
       left: 31px;
     }
   }
+}
+.triangle-inside:hover {
+  border-bottom: 70px solid #2b2929;
 }
 
 .imageBanque {
@@ -300,6 +321,9 @@
   @media (min-width: 1200px) {
     left: 230px;
   }
+  @media (min-width: 1400px) {
+    font-size: 3.5rem;
+  }
 }
 
 .cardDate-input--month {
@@ -325,6 +349,10 @@
   @media (min-width: 1200px) {
     left: 535px;
   }
+  @media (min-width: 1400px) {
+    left: 790px;
+    width: 60px;
+  }
 }
 .cardDate-input--span {
   position: absolute;
@@ -348,6 +376,9 @@
   }
   @media (min-width: 1200px) {
     left: 600px;
+  }
+  @media (min-width: 1400px) {
+    left: 870px;
   }
 }
 .cardDate-input--year {
@@ -373,6 +404,10 @@
   @media (min-width: 1200px) {
     left: 625px;
   }
+  @media (min-width: 1400px) {
+    left: 900px;
+    width: 50px;
+  }
 }
 
 .text-cardDate {
@@ -394,6 +429,9 @@
   }
   @media (min-width: 1200px) {
     left: 420px; 
+  }
+  @media (min-width: 1400px) {
+    left: 660px; 
   }
 }
 
@@ -419,6 +457,10 @@
   @media (min-width: 1200px) {
    left: 470px;
   }
+  @media (min-width: 1400px) {
+    left: 786px;
+    width: 200px;
+  }
 }
 
 .inputName--name {
@@ -443,6 +485,10 @@
   @media (min-width: 1200px) {
     left: 678px;
   }
+  @media (min-width: 1400px) {
+    left: 1010px;
+    width: 200px;
+  }
 }
 
 .optionCivil {
@@ -465,6 +511,9 @@
   }
   @media (min-width: 1200px) {
     left: 330px; 
+  }
+  @media (min-width: 1400px) {
+    left: 655px;
   }
 }
 
@@ -524,6 +573,10 @@
     padding: 0.4rem;
     border-radius: 5px;
     background: #bbdfc8;
+    cursor: pointer;
+    &:hover {
+      background: #18af85;
+    }
     @media (min-width: 768px) {
       font-size: 1.5rem;
     }
@@ -532,6 +585,9 @@
     }
     @media (min-width: 1200px) {
       margin: 190px auto;
+    }
+    @media (min-width: 1400px) {
+      margin: 250px auto;
     }
   }
 }

@@ -11,9 +11,10 @@ const Facture = ({orderList, numeroCde, articlesList}) => {
   }
   return (
     <>
-    <div className="panier">
+    <div className="panier facture">
       <Link to='/mesCommandes' className="panier-retour" >Revenir à la liste</Link>
       <h2 className="panier-titre">Ma Facture</h2>
+      <div className="factureList">
         <p>Commande numéro : {Invoice.numeroCde}</p>
         <p>Date de commande : {Invoice.dateCommande}</p>
         <p>Montant Payé : {Invoice.totalAmount.toFixed(2)} €</p>
@@ -24,6 +25,7 @@ const Facture = ({orderList, numeroCde, articlesList}) => {
             <li key={i}>{cde.titre} x {cde.quantite}</li>
             ))}
         </ul>
+      </div>
     </div>
   </>
   )

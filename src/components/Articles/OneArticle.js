@@ -36,16 +36,28 @@ const OneArticle = ({sendArticleToBasket, open}) => {
     document.querySelector('.articles-detail-image--img').style.display = "block"
     document.querySelector('.articles-detail-image--img--1').style.display = "none"
     document.querySelector('.articles-detail-image--img--2').style.display = "none"
+    document.querySelector('.articles-detail-circle').style.background = "#ef726b"
+    document.querySelector('.articles-detail-photos-1').style.transform = "scale(0.5)"
+    document.querySelector('.articles-detail-photos-2').style.transform = "scale(1)"
+    document.querySelector('.articles-detail-photos-3').style.transform = "scale(1)"
   }
   const greenClick = () => {
     document.querySelector('.articles-detail-image--img--1').style.display = "block"
     document.querySelector('.articles-detail-image--img').style.display = "none"
     document.querySelector('.articles-detail-image--img--2').style.display = "none"
+    document.querySelector('.articles-detail-circle').style.background = "#6dd9ff"
+    document.querySelector('.articles-detail-photos-2').style.transform = "scale(0.5)"
+    document.querySelector('.articles-detail-photos-1').style.transform = "scale(1)"
+    document.querySelector('.articles-detail-photos-3').style.transform = "scale(1)"
   }
   const blueClick = () => {
     document.querySelector('.articles-detail-image--img--2').style.display = "block"
     document.querySelector('.articles-detail-image--img').style.display = "none"
     document.querySelector('.articles-detail-image--img--1').style.display = "none"
+    document.querySelector('.articles-detail-circle').style.background = "#75cfb8"
+    document.querySelector('.articles-detail-photos-3').style.transform = "scale(0.5)"
+    document.querySelector('.articles-detail-photos-1').style.transform = "scale(1)"
+    document.querySelector('.articles-detail-photos-2').style.transform = "scale(1)"
   }
   
   return (
